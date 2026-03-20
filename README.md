@@ -1,4 +1,4 @@
-# 🚀 [LIVE DEMO → bocra-theta.vercel.app](https://bocra-theta.vercel.app/)
+# [LIVE DEMO → bocra-theta.vercel.app](https://bocra-theta.vercel.app/)
 
 <div align="center">
 
