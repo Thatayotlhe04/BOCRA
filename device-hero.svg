@@ -1,0 +1,168 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hbg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#060E1A"/>
+      <stop offset="1" stop-color="#0C2340"/>
+    </linearGradient>
+    <clipPath id="scr"><rect x="432" y="68" width="336" height="584" rx="6"/></clipPath>
+    <linearGradient id="heroGrad" x1="432" y1="120" x2="768" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C2340"/><stop offset="1" stop-color="#0A4568"/>
+    </linearGradient>
+    <linearGradient id="sectorGrad" x1="432" y1="446" x2="768" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1F38"/><stop offset="1" stop-color="#0C2340"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#hbg)"/>
+  <!-- Ambient glow -->
+  <ellipse cx="600" cy="360" rx="340" ry="280" fill="#0077B6" fill-opacity="0.035"/>
+  <ellipse cx="200" cy="600" rx="250" ry="200" fill="#E31B6D" fill-opacity="0.02"/>
+
+  <!-- Left text block -->
+  <text x="52" y="220" fill="#FFFFFF" font-size="46" font-family="system-ui,sans-serif" font-weight="800" letter-spacing="-1">BOCRA</text>
+  <text x="52" y="270" fill="#FFFFFF" font-size="46" font-family="system-ui,sans-serif" font-weight="800" letter-spacing="-1">Digital Platform</text>
+  <text x="52" y="325" fill="#64748B" font-size="18" font-family="system-ui,sans-serif" font-weight="400">Citizen-centric regulatory services</text>
+  <text x="52" y="352" fill="#64748B" font-size="18" font-family="system-ui,sans-serif" font-weight="400">for Botswana — reimagined.</text>
+
+  <!-- CTA button -->
+  <rect x="52" y="390" width="185" height="48" rx="24" fill="#0077B6"/>
+  <text x="98" y="420" fill="#FFFFFF" font-size="15" font-family="system-ui,sans-serif" font-weight="700">Open Live Demo →</text>
+
+  <!-- Stat pills -->
+  <rect x="52" y="480" width="120" height="56" rx="12" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="72" y="504" fill="#FFD100" font-size="20" font-family="system-ui,sans-serif" font-weight="800">98%</text>
+  <text x="72" y="524" fill="#475569" font-size="11" font-family="system-ui,sans-serif">Resolved</text>
+
+  <rect x="184" y="480" width="120" height="56" rx="12" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="204" y="504" fill="#00A651" font-size="20" font-family="system-ui,sans-serif" font-weight="800">6 days</text>
+  <text x="204" y="524" fill="#475569" font-size="11" font-family="system-ui,sans-serif">Avg. resolve</text>
+
+  <rect x="316" y="480" width="80" height="56" rx="12" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="336" y="504" fill="#0077B6" font-size="20" font-family="system-ui,sans-serif" font-weight="800">2</text>
+  <text x="336" y="524" fill="#475569" font-size="11" font-family="system-ui,sans-serif">Languages</text>
+
+  <!-- ═══ iPhone Frame ═══ -->
+  <!-- Outer shell -->
+  <rect x="418" y="30" width="364" height="660" rx="48" fill="#1C1C1E" stroke="#3A3A3C" stroke-width="1.5"/>
+  <!-- Inner bezel -->
+  <rect x="426" y="38" width="348" height="644" rx="42" fill="#111111"/>
+
+  <!-- Screen content -->
+  <g clip-path="url(#scr)">
+    <!-- Page background -->
+    <rect x="432" y="68" width="336" height="584" fill="#ECEEF1"/>
+
+    <!-- ── Header bar ── -->
+    <rect x="432" y="68" width="336" height="48" fill="#0C2340"/>
+    <rect x="432" y="116" width="336" height="3" fill="#FFD100"/>
+    <!-- Brand dots -->
+    <circle cx="452" cy="92" r="3.5" fill="#0077B6"/>
+    <circle cx="461" cy="92" r="3.5" fill="#00A651"/>
+    <circle cx="470" cy="92" r="3.5" fill="#E31B6D"/>
+    <circle cx="479" cy="92" r="3.5" fill="#FFD100"/>
+    <text x="488" y="96" fill="#FFFFFF" font-size="13" font-family="system-ui,sans-serif" font-weight="700">BOCRA</text>
+    <!-- Lang toggle -->
+    <rect x="700" y="80" width="52" height="18" rx="4" fill="#FFFFFF" fill-opacity="0.08"/>
+    <text x="708" y="93" fill="#FFFFFF" fill-opacity="0.5" font-size="8" font-family="system-ui,sans-serif" font-weight="500">Setswana</text>
+
+    <!-- ── Hero section ── -->
+    <rect x="432" y="119" width="336" height="128" fill="url(#heroGrad)"/>
+    <circle cx="730" cy="140" r="60" fill="#0077B6" fill-opacity="0.06"/>
+    <text x="600" y="170" fill="#FFFFFF" font-size="16" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle">What do you need</text>
+    <text x="600" y="190" fill="#FFFFFF" font-size="16" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle">help with today?</text>
+    <!-- Search bar -->
+    <rect x="470" y="208" width="260" height="28" rx="8" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <text x="490" y="227" fill="#FFFFFF" fill-opacity="0.2" font-size="10" font-family="system-ui,sans-serif">Search licenses, regulations...</text>
+
+    <!-- ── Complaint Star Card ── -->
+    <rect x="444" y="258" width="312" height="90" rx="10" fill="#FFFFFF" stroke="#F0F0F0"/>
+    <rect x="444" y="258" width="312" height="3" rx="1.5" fill="#E31B6D"/>
+    <!-- Icon circle -->
+    <rect x="456" y="270" width="26" height="26" rx="7" fill="#FDE9F1"/>
+    <text x="463" y="289" fill="#E31B6D" font-size="13" font-family="system-ui,sans-serif" font-weight="700">✉</text>
+    <!-- Badge -->
+    <rect x="488" y="272" width="80" height="14" rx="7" fill="#FDE9F1"/>
+    <text x="494" y="282" fill="#E31B6D" font-size="7" font-family="system-ui,sans-serif" font-weight="700">MOST USED</text>
+    <text x="456" y="310" fill="#1A1D21" font-size="12" font-family="system-ui,sans-serif" font-weight="700">File or Track a Complaint</text>
+    <text x="456" y="324" fill="#868E96" font-size="9" font-family="system-ui,sans-serif">Submit and track complaints in real time</text>
+    <!-- CTA pill -->
+    <rect x="456" y="332" width="90" height="12" rx="4" fill="#E31B6D"/>
+    <text x="466" y="341" fill="#FFFFFF" font-size="7" font-family="system-ui,sans-serif" font-weight="600">File Complaint →</text>
+
+    <!-- ── Service cards row ── -->
+    <rect x="444" y="358" width="98" height="52" rx="8" fill="#FFFFFF" stroke="#F0F0F0"/>
+    <rect x="444" y="358" width="98" height="2.5" rx="1" fill="#0077B6"/>
+    <text x="458" y="388" fill="#1A1D21" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Licensing</text>
+    <text x="458" y="400" fill="#868E96" font-size="7" font-family="system-ui,sans-serif">Apply &amp; verify</text>
+
+    <rect x="550" y="358" width="98" height="52" rx="8" fill="#FFFFFF" stroke="#F0F0F0"/>
+    <rect x="550" y="358" width="98" height="2.5" rx="1" fill="#00A651"/>
+    <text x="564" y="388" fill="#1A1D21" font-size="9" font-family="system-ui,sans-serif" font-weight="600">.BW Domains</text>
+    <text x="564" y="400" fill="#868E96" font-size="7" font-family="system-ui,sans-serif">Register &amp; manage</text>
+
+    <rect x="656" y="358" width="98" height="52" rx="8" fill="#FFFFFF" stroke="#F0F0F0"/>
+    <rect x="656" y="358" width="98" height="2.5" rx="1" fill="#0C2340"/>
+    <text x="670" y="388" fill="#1A1D21" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Type Approval</text>
+    <text x="670" y="400" fill="#868E96" font-size="7" font-family="system-ui,sans-serif">Equipment DB</text>
+
+    <!-- ── What We Regulate ── -->
+    <rect x="432" y="420" width="336" height="110" fill="url(#sectorGrad)"/>
+    <text x="456" y="446" fill="#FFFFFF" font-size="12" font-family="system-ui,sans-serif" font-weight="700">What We Regulate</text>
+    <text x="456" y="460" fill="#FFFFFF" fill-opacity="0.3" font-size="8" font-family="system-ui,sans-serif">Four key sectors across communications</text>
+    <!-- Sector chips -->
+    <rect x="444" y="472" width="74" height="48" rx="8" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <circle cx="466" cy="490" r="8" fill="#0077B6" fill-opacity="0.15"/>
+    <text x="460" y="512" fill="#FFFFFF" font-size="7" font-family="system-ui,sans-serif" font-weight="600">Telecom</text>
+    <rect x="524" y="472" width="74" height="48" rx="8" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <circle cx="546" cy="490" r="8" fill="#00A651" fill-opacity="0.15"/>
+    <text x="530" y="512" fill="#FFFFFF" font-size="7" font-family="system-ui,sans-serif" font-weight="600">Broadcasting</text>
+    <rect x="604" y="472" width="74" height="48" rx="8" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <circle cx="626" cy="490" r="8" fill="#E31B6D" fill-opacity="0.15"/>
+    <text x="624" y="512" fill="#FFFFFF" font-size="7" font-family="system-ui,sans-serif" font-weight="600">Postal</text>
+    <rect x="684" y="472" width="74" height="48" rx="8" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <circle cx="706" cy="490" r="8" fill="#FFD100" fill-opacity="0.15"/>
+    <text x="694" y="512" fill="#FFFFFF" font-size="7" font-family="system-ui,sans-serif" font-weight="600">Internet</text>
+
+    <!-- ── Stats bar ── -->
+    <rect x="432" y="530" width="336" height="50" fill="#0C2340"/>
+    <text x="476" y="555" fill="#FFD100" font-size="16" font-family="system-ui,sans-serif" font-weight="800">2,450+</text>
+    <text x="476" y="568" fill="#FFFFFF" fill-opacity="0.25" font-size="6" font-family="system-ui,sans-serif" letter-spacing="0.8">LICENSES</text>
+    <text x="572" y="555" fill="#00A651" font-size="16" font-family="system-ui,sans-serif" font-weight="800">98%</text>
+    <text x="572" y="568" fill="#FFFFFF" fill-opacity="0.25" font-size="6" font-family="system-ui,sans-serif" letter-spacing="0.8">RESOLVED</text>
+    <text x="650" y="555" fill="#0077B6" font-size="16" font-family="system-ui,sans-serif" font-weight="800">1,200+</text>
+    <text x="650" y="568" fill="#FFFFFF" fill-opacity="0.25" font-size="6" font-family="system-ui,sans-serif" letter-spacing="0.8">DEVICES</text>
+
+    <!-- ── BOCRA AI FAB ── -->
+    <rect x="706" y="610" width="56" height="24" rx="12" fill="#0077B6"/>
+    <text x="715" y="626" fill="#FFFFFF" font-size="8" font-family="system-ui,sans-serif" font-weight="700">BOCRA AI</text>
+  </g>
+
+  <!-- Dynamic Island -->
+  <rect x="558" y="46" width="84" height="26" rx="13" fill="#000000"/>
+  <!-- Side buttons -->
+  <rect x="782" y="180" width="3" height="48" rx="1.5" fill="#3A3A3C"/>
+  <rect x="415" y="200" width="3" height="30" rx="1.5" fill="#3A3A3C"/>
+  <rect x="415" y="250" width="3" height="48" rx="1.5" fill="#3A3A3C"/>
+
+  <!-- Right side tech labels -->
+  <text x="840" y="180" fill="#FFFFFF" font-size="13" font-family="system-ui,sans-serif" font-weight="700" letter-spacing="1.5" fill-opacity="0.3">BUILT WITH</text>
+
+  <rect x="840" y="200" width="108" height="34" rx="10" fill="#000000" stroke="#333333"/>
+  <text x="866" y="222" fill="#FFFFFF" font-size="13" font-family="system-ui,sans-serif" font-weight="600">Next.js 14</text>
+
+  <rect x="958" y="200" width="108" height="34" rx="10" fill="#3ECF8E" fill-opacity="0.1" stroke="#3ECF8E" stroke-opacity="0.25"/>
+  <text x="980" y="222" fill="#3ECF8E" font-size="13" font-family="system-ui,sans-serif" font-weight="600">Supabase</text>
+
+  <rect x="840" y="244" width="108" height="34" rx="10" fill="#3178C6" fill-opacity="0.1" stroke="#3178C6" stroke-opacity="0.25"/>
+  <text x="854" y="266" fill="#60A5FA" font-size="13" font-family="system-ui,sans-serif" font-weight="600">TypeScript</text>
+
+  <rect x="958" y="244" width="108" height="34" rx="10" fill="#06B6D4" fill-opacity="0.1" stroke="#06B6D4" stroke-opacity="0.25"/>
+  <text x="975" y="266" fill="#22D3EE" font-size="13" font-family="system-ui,sans-serif" font-weight="600">Tailwind</text>
+
+  <rect x="840" y="288" width="226" height="34" rx="10" fill="#FFFFFF" fill-opacity="0.03" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <text x="905" y="310" fill="#94A3B8" font-size="13" font-family="system-ui,sans-serif" font-weight="600">Deployed on Vercel ▲</text>
+
+  <!-- Bottom tagline -->
+  <text x="840" y="380" fill="#475569" font-size="14" font-family="system-ui,sans-serif">73% of Batswana access the web</text>
+  <text x="840" y="402" fill="#475569" font-size="14" font-family="system-ui,sans-serif">on their phones.</text>
+  <text x="840" y="434" fill="#64748B" font-size="14" font-family="system-ui,sans-serif" font-weight="600">This was built for them first.</text>
+</svg>

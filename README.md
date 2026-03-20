@@ -1,4 +1,4 @@
-# 🚀 LIVE DEMO: https://bocra-web.vercel.app
+# [LIVE DEMO → bocra-theta.vercel.app](https://bocra-theta.vercel.app/)
 
 <div align="center">
 
@@ -9,15 +9,18 @@
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000?style=for-the-badge&logo=vercel)](https://vercel.com/)
 
-### 👉 [Open the Live Platform](https://bocra-web.vercel.app)
+### 👉 [**Open the Live Platform →**](https://bocra-theta.vercel.app/)
 
 </div>
 
 ---
 
-## Hero Demo: Website Functionality at a Glance
+![BOCRA Platform Preview](assets/readme-media/device-hero.svg)
+
+---
 
 <img src="./assets/readme-media/hero-functionality-demo.svg" alt="BOCRA Hero Functionality Demo" width="820" />
 
@@ -30,40 +33,47 @@
 
 ## Visual Highlights
 
-> All visuals below are presented in an **iPhone 17 Pro Max-style mockup** to better reflect real mobile usage.
+---
 
-### BOCRA AI Chatbot
-<img src="./assets/readme-media/bocra-ai-chatbot.svg" alt="BOCRA AI Chatbot" width="420" />
+## Product Walkthrough
 
-### Complaint Tracker (Mobile View)
-<img src="./assets/readme-media/complaint-tracker-mobile.svg" alt="Complaint Tracker Mobile" width="420" />
+### Feature 01 — Complaints System
 
-### English / Setswana Toggle
-<img src="./assets/readme-media/language-toggle.svg" alt="Language Toggle" width="420" />
+Our flagship feature transforms a frustrating offline process into a transparent, trackable digital experience.
 
-> These visuals are polished README showcase graphics (so your project still looks great even before final production screenshots/GIF captures).
+![Complaints Walkthrough](assets/readme-media/walkthrough-complaints.svg)
 
-## The Problem
+**The flow:**
+1. **Choose Provider** — Select from any licensed telecom, broadcasting, or postal provider in Botswana
+2. **Describe the Issue** — Guided form with category selection, detailed description, incident date, and contact info
+3. **Submit & Get ID** — Receive a unique tracking ID (e.g. `CMP-2026-4821`) instantly with email + SMS confirmation
+4. **Live Tracking** — Uber-style timeline with pulsing status indicator, progress bar, and estimated resolution time
 
-BOCRA's current website is outdated — a COVID-19 banner still dominates the homepage in 2026, the search overlay blocks content on every page, navigation is flat and chaotic, there's no mobile responsiveness, and citizens have no transparent way to file or track complaints. Service delivery is fragmented, manual, and opaque.
+Every step is logged. Every status is visible. No more "we'll get back to you."
 
-## Our Solution
+> **Try it live:** [`/complaints/track/CMP-2026-0341`](https://bocra-theta.vercel.app/complaints/track/CMP-2026-0341) — active investigation | [`/complaints/track/CMP-2026-0298`](https://bocra-theta.vercel.app/complaints/track/CMP-2026-0298) — resolved case
 
-A complete reimagining of BOCRA's digital presence as a **task-first, citizen-centric platform** that puts services front and center, makes complaints trackable in real time, and introduces AI-powered assistance for regulatory queries.
+---
 
-## Key Features
+### Feature 02 — BOCRA AI Assistant
 
-**Complaints System** — Guided 4-step filing flow with Uber-style live tracking. Every action logged, every status visible. No more "we'll get back to you."
+An always-on digital assistant for regulatory guidance — available on every page via the floating action button.
 
-**BOCRA AI** — AI-powered chatbot that answers regulatory questions about licensing, complaints, type approval, and more. Speaks English and Setswana.
+![BOCRA AI Walkthrough](assets/readme-media/walkthrough-ai.svg)
 
-**Bilingual Support** — Full English / Setswana toggle across the platform. Because regulation should be accessible in your mother tongue.
+**Capabilities:** Answers regulatory FAQs instantly, guides complaint filing, license requirement lookups, contact info + office hours, bilingual English/Setswana support. Currently powered by canned responses with intelligent keyword matching — Gemini API integration planned for Day 3+.
 
-**What We Regulate** — Clear sector breakdown: Telecommunications, Broadcasting, Postal Services, Internet & ICT — each with its own visual identity.
+---
 
-**Cybersecurity Advisories** — Real-time security alerts with severity badges. A new feature the current site completely lacks.
+### Feature 03 — Citizen Portal
 
-**Admin Dashboard** — Internal staff view with complaint processing queues and analytics (behind auth).
+Six integrated service modules that replace the current site's chaotic navigation with clear, task-oriented cards.
+
+![Portal Walkthrough](assets/readme-media/walkthrough-portal.svg)
+
+**Services:** Complaints (flagship), Licensing Portal, .BW Domain Registry, Type Approval, Cybersecurity Advisories (new — the current site has nothing like this), Documents & Public Consultations.
+
+---
 
 ## What Makes This Different
 
@@ -74,9 +84,11 @@ A complete reimagining of BOCRA's digital presence as a **task-first, citizen-ce
 | No complaint tracking | Uber-style live tracking with timeline |
 | No mobile support | Mobile-first responsive design |
 | English only | English + Setswana |
-| No AI assistance | BOCRA AI chatbot |
+| No AI assistance | BOCRA AI chatbot on every page |
 | Flat navigation dump | Service cards with clear hierarchy |
 | No cybersecurity info | Live advisories with severity levels |
+
+---
 
 ## Tech Stack & Architecture
 
@@ -117,6 +129,8 @@ bocra-web/
 └── tailwind.config.ts  # BOCRA brand tokens
 ```
 
+---
+
 ## Security & Data Protection
 
 - **Supabase Row Level Security** — Users can only access their own complaints
@@ -134,6 +148,8 @@ bocra-web/
 - **TypeScript throughout** — type-safe interfaces for all data models
 - **Edge deployment** on Vercel — global CDN, auto-scaling
 
+---
+
 ## Getting Started
 
 ```bash
@@ -146,6 +162,8 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+---
 
 ## Team
 

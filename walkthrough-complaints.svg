@@ -1,0 +1,119 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wbg1" x1="0" y1="0" x2="1200" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C2340"/><stop offset="1" stop-color="#11385A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="520" rx="16" fill="url(#wbg1)"/>
+
+  <!-- Header -->
+  <rect x="40" y="32" width="12" height="12" rx="6" fill="#E31B6D"/>
+  <text x="62" y="43" fill="#E31B6D" font-size="12" font-family="system-ui,sans-serif" font-weight="700" letter-spacing="2">FEATURE 01</text>
+  <text x="40" y="82" fill="#FFFFFF" font-size="30" font-family="system-ui,sans-serif" font-weight="800">Complaints System</text>
+  <text x="40" y="110" fill="#64748B" font-size="16" font-family="system-ui,sans-serif">From filing to resolution — fully transparent, Uber-style tracking</text>
+
+  <!-- ═══ Step 1 ═══ -->
+  <rect x="40" y="145" width="260" height="340" rx="16" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.4"/>
+  <!-- Step number -->
+  <rect x="56" y="164" width="36" height="36" rx="18" fill="#E31B6D"/>
+  <text x="74" y="189" fill="#FFFFFF" font-size="17" font-family="system-ui,sans-serif" font-weight="800" text-anchor="middle">1</text>
+  <text x="102" y="188" fill="#FFFFFF" font-size="15" font-family="system-ui,sans-serif" font-weight="700">Choose Provider</text>
+  <text x="56" y="218" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">Select from licensed telecom,</text>
+  <text x="56" y="236" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">broadcasting, or postal providers.</text>
+  <!-- Mini provider list -->
+  <rect x="56" y="262" width="228" height="34" rx="8" fill="#E31B6D" fill-opacity="0.12" stroke="#E31B6D" stroke-opacity="0.3"/>
+  <text x="76" y="284" fill="#F472B6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">✓ Mascom Wireless</text>
+  <rect x="56" y="304" width="228" height="34" rx="8" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="76" y="326" fill="#64748B" font-size="12" font-family="system-ui,sans-serif">Orange Botswana</text>
+  <rect x="56" y="346" width="228" height="34" rx="8" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="76" y="368" fill="#64748B" font-size="12" font-family="system-ui,sans-serif">BTC Telecommunications</text>
+  <rect x="56" y="388" width="228" height="34" rx="8" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="76" y="410" fill="#64748B" font-size="12" font-family="system-ui,sans-serif">BotswanaPost</text>
+  <rect x="56" y="430" width="228" height="34" rx="8" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="76" y="452" fill="#64748B" font-size="12" font-family="system-ui,sans-serif">Gabz FM</text>
+
+  <!-- Arrow 1→2 -->
+  <path d="M310 315 L335 315" stroke="#E31B6D" stroke-width="2" stroke-dasharray="4 3" opacity="0.5"/>
+  <path d="M330 309 L340 315 L330 321" fill="#E31B6D" opacity="0.5"/>
+
+  <!-- ═══ Step 2 ═══ -->
+  <rect x="350" y="145" width="260" height="340" rx="16" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.4"/>
+  <rect x="366" y="164" width="36" height="36" rx="18" fill="#E31B6D"/>
+  <text x="384" y="189" fill="#FFFFFF" font-size="17" font-family="system-ui,sans-serif" font-weight="800" text-anchor="middle">2</text>
+  <text x="412" y="188" fill="#FFFFFF" font-size="15" font-family="system-ui,sans-serif" font-weight="700">Describe Issue</text>
+  <text x="366" y="218" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">Category, description, dates,</text>
+  <text x="366" y="236" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">and contact info.</text>
+  <!-- Mini form -->
+  <text x="366" y="268" fill="#94A3B8" font-size="10" font-family="system-ui,sans-serif" font-weight="600">Category</text>
+  <rect x="366" y="274" width="228" height="30" rx="7" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <text x="380" y="294" fill="#64748B" font-size="11" font-family="system-ui,sans-serif">Billing &amp; Charges</text>
+  <text x="366" y="322" fill="#94A3B8" font-size="10" font-family="system-ui,sans-serif" font-weight="600">Description</text>
+  <rect x="366" y="328" width="228" height="72" rx="7" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <text x="380" y="350" fill="#64748B" font-size="11" font-family="system-ui,sans-serif">I was charged P450 for a</text>
+  <text x="380" y="368" fill="#64748B" font-size="11" font-family="system-ui,sans-serif">service I never subscribed</text>
+  <text x="380" y="386" fill="#64748B" font-size="11" font-family="system-ui,sans-serif">to on 15 March 2026...</text>
+  <text x="366" y="420" fill="#94A3B8" font-size="10" font-family="system-ui,sans-serif" font-weight="600">Date</text>
+  <rect x="366" y="426" width="105" height="28" rx="7" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <text x="380" y="445" fill="#64748B" font-size="10" font-family="system-ui,sans-serif">15 Mar 2026</text>
+  <text x="481" y="420" fill="#94A3B8" font-size="10" font-family="system-ui,sans-serif" font-weight="600">Phone</text>
+  <rect x="481" y="426" width="113" height="28" rx="7" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <text x="495" y="445" fill="#64748B" font-size="10" font-family="system-ui,sans-serif">+267 7X XXX</text>
+
+  <!-- Arrow 2→3 -->
+  <path d="M620 315 L645 315" stroke="#00A651" stroke-width="2" stroke-dasharray="4 3" opacity="0.5"/>
+  <path d="M640 309 L650 315 L640 321" fill="#00A651" opacity="0.5"/>
+
+  <!-- ═══ Step 3 ═══ -->
+  <rect x="660" y="145" width="240" height="340" rx="16" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.4"/>
+  <rect x="676" y="164" width="36" height="36" rx="18" fill="#00A651"/>
+  <text x="694" y="189" fill="#FFFFFF" font-size="17" font-family="system-ui,sans-serif" font-weight="800" text-anchor="middle">3</text>
+  <text x="722" y="188" fill="#FFFFFF" font-size="15" font-family="system-ui,sans-serif" font-weight="700">Submit &amp; Get ID</text>
+  <text x="676" y="218" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">Review, submit, and receive</text>
+  <text x="676" y="236" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">a unique tracking ID.</text>
+  <!-- Success state -->
+  <circle cx="780" cy="310" r="32" fill="#00A651" fill-opacity="0.12"/>
+  <circle cx="780" cy="310" r="20" fill="#00A651" fill-opacity="0.2"/>
+  <path d="M770 310 L777 317 L792 302" stroke="#00A651" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="780" y="368" fill="#FFFFFF" font-size="14" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700">Submitted!</text>
+  <!-- ID card -->
+  <rect x="710" y="390" width="140" height="42" rx="10" fill="#0C2340" stroke="#1A3D6B"/>
+  <text x="780" y="417" fill="#FFD100" font-size="17" text-anchor="middle" font-family="monospace" font-weight="800" letter-spacing="1.5">CMP-2026-4821</text>
+  <text x="780" y="456" fill="#64748B" font-size="11" text-anchor="middle" font-family="system-ui,sans-serif">Email + SMS confirmation sent</text>
+
+  <!-- Arrow 3→4 -->
+  <path d="M910 315 L935 315" stroke="#0077B6" stroke-width="2" stroke-dasharray="4 3" opacity="0.5"/>
+  <path d="M930 309 L940 315 L930 321" fill="#0077B6" opacity="0.5"/>
+
+  <!-- ═══ Step 4 ═══ -->
+  <rect x="950" y="145" width="220" height="340" rx="16" fill="#0E2D52" stroke="#0077B6" stroke-opacity="0.35"/>
+  <rect x="966" y="164" width="36" height="36" rx="18" fill="#0077B6"/>
+  <text x="984" y="189" fill="#FFFFFF" font-size="17" font-family="system-ui,sans-serif" font-weight="800" text-anchor="middle">4</text>
+  <text x="1012" y="188" fill="#FFFFFF" font-size="15" font-family="system-ui,sans-serif" font-weight="700">Live Tracking</text>
+  <text x="966" y="218" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">Uber-style timeline with</text>
+  <text x="966" y="236" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">pulsing live status.</text>
+  <!-- Timeline -->
+  <line x1="988" y1="268" x2="988" y2="456" stroke="#1E4A7A" stroke-width="2"/>
+  <!-- Done segments overlay -->
+  <line x1="988" y1="268" x2="988" y2="380" stroke="#0077B6" stroke-width="2"/>
+  <!-- Step dots -->
+  <circle cx="988" cy="278" r="8" fill="#0077B6"/>
+  <path d="M984 278 L987 281 L993 275" stroke="#FFF" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="1006" y="282" fill="#FFFFFF" font-size="11" font-family="system-ui,sans-serif" font-weight="500">Submitted</text>
+
+  <circle cx="988" cy="318" r="8" fill="#0077B6"/>
+  <path d="M984 318 L987 321 L993 315" stroke="#FFF" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="1006" y="322" fill="#FFFFFF" font-size="11" font-family="system-ui,sans-serif" font-weight="500">Acknowledged</text>
+
+  <circle cx="988" cy="358" r="8" fill="#0077B6"/>
+  <path d="M984 358 L987 361 L993 355" stroke="#FFF" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="1006" y="362" fill="#FFFFFF" font-size="11" font-family="system-ui,sans-serif" font-weight="500">Investigating</text>
+
+  <!-- Current step - pulsing -->
+  <circle cx="988" cy="400" r="12" fill="#FFD100" fill-opacity="0.15"/>
+  <circle cx="988" cy="400" r="7" fill="#FFD100"/>
+  <text x="1006" y="404" fill="#FFD100" font-size="11" font-family="system-ui,sans-serif" font-weight="700">Assigned</text>
+
+  <!-- Pending -->
+  <circle cx="988" cy="440" r="7" fill="none" stroke="#334155" stroke-width="2"/>
+  <text x="1006" y="444" fill="#475569" font-size="11" font-family="system-ui,sans-serif">Resolved</text>
+</svg>

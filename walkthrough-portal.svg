@@ -1,0 +1,86 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wbg3" x1="0" y1="0" x2="1200" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1628"/><stop offset="1" stop-color="#0C2340"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="520" rx="16" fill="url(#wbg3)"/>
+
+  <!-- Header -->
+  <rect x="40" y="32" width="12" height="12" rx="6" fill="#00A651"/>
+  <text x="62" y="43" fill="#00A651" font-size="12" font-family="system-ui,sans-serif" font-weight="700" letter-spacing="2">FEATURE 03</text>
+  <text x="40" y="82" fill="#FFFFFF" font-size="30" font-family="system-ui,sans-serif" font-weight="800">Citizen Portal</text>
+  <text x="40" y="110" fill="#64748B" font-size="16" font-family="system-ui,sans-serif">Six integrated service modules — everything in one place</text>
+
+  <!-- ═══ Service Cards Grid ═══ -->
+  <!-- Row 1 -->
+  <rect x="40" y="145" width="365" height="120" rx="16" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.3"/>
+  <rect x="60" y="166" width="44" height="44" rx="12" fill="#E31B6D" fill-opacity="0.12"/>
+  <text x="72" y="194" fill="#E31B6D" font-size="20" font-family="system-ui,sans-serif" font-weight="800">✉</text>
+  <text x="116" y="184" fill="#FFFFFF" font-size="16" font-family="system-ui,sans-serif" font-weight="700">Complaints</text>
+  <rect x="214" y="172" width="60" height="18" rx="9" fill="#E31B6D" fill-opacity="0.15"/>
+  <text x="224" y="185" fill="#E31B6D" font-size="9" font-family="system-ui,sans-serif" font-weight="700">FLAGSHIP</text>
+  <text x="116" y="206" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">4-step filing with Uber-style live tracking.</text>
+  <text x="116" y="224" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">Every action logged, every status visible.</text>
+  <text x="116" y="248" fill="#64748B" font-size="11" font-family="system-ui,sans-serif" font-weight="600">98% resolution rate · 6-day avg</text>
+
+  <rect x="418" y="145" width="365" height="120" rx="16" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.3"/>
+  <rect x="438" y="166" width="44" height="44" rx="12" fill="#0077B6" fill-opacity="0.12"/>
+  <text x="451" y="194" fill="#0077B6" font-size="18" font-family="system-ui,sans-serif" font-weight="800">L</text>
+  <text x="494" y="184" fill="#FFFFFF" font-size="16" font-family="system-ui,sans-serif" font-weight="700">Licensing Portal</text>
+  <text x="494" y="206" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">Apply, renew, and verify telecom licenses</text>
+  <text x="494" y="224" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">online. Status tracking included.</text>
+  <text x="494" y="248" fill="#64748B" font-size="11" font-family="system-ui,sans-serif" font-weight="600">2,450+ active licenses</text>
+
+  <rect x="796" y="145" width="365" height="120" rx="16" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.3"/>
+  <rect x="816" y="166" width="44" height="44" rx="12" fill="#00A651" fill-opacity="0.12"/>
+  <text x="824" y="194" fill="#00A651" font-size="16" font-family="system-ui,sans-serif" font-weight="800">.bw</text>
+  <text x="872" y="184" fill="#FFFFFF" font-size="16" font-family="system-ui,sans-serif" font-weight="700">.BW Domain Registry</text>
+  <text x="872" y="206" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">Register and manage Botswana</text>
+  <text x="872" y="224" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">domain names through BOCRA.</text>
+  <text x="872" y="248" fill="#64748B" font-size="11" font-family="system-ui,sans-serif" font-weight="600">35,000+ domains registered</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="278" width="365" height="120" rx="16" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.3"/>
+  <rect x="60" y="299" width="44" height="44" rx="12" fill="#FFD100" fill-opacity="0.12"/>
+  <text x="73" y="327" fill="#FFD100" font-size="18" font-family="system-ui,sans-serif" font-weight="800">✓</text>
+  <text x="116" y="317" fill="#FFFFFF" font-size="16" font-family="system-ui,sans-serif" font-weight="700">Type Approval</text>
+  <text x="116" y="339" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">Equipment certification database.</text>
+  <text x="116" y="357" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">Search approved devices by make/model.</text>
+  <text x="116" y="381" fill="#64748B" font-size="11" font-family="system-ui,sans-serif" font-weight="600">1,200+ approved devices</text>
+
+  <rect x="418" y="278" width="365" height="120" rx="16" fill="#0E2D52" stroke="#E31B6D" stroke-opacity="0.2"/>
+  <rect x="438" y="299" width="44" height="44" rx="12" fill="#E31B6D" fill-opacity="0.12"/>
+  <text x="454" y="327" fill="#E31B6D" font-size="18" font-family="system-ui,sans-serif" font-weight="800">⚠</text>
+  <text x="494" y="317" fill="#FFFFFF" font-size="16" font-family="system-ui,sans-serif" font-weight="700">Cybersecurity Advisories</text>
+  <rect x="684" y="305" width="42" height="18" rx="9" fill="#E31B6D" fill-opacity="0.15"/>
+  <text x="692" y="318" fill="#E31B6D" font-size="9" font-family="system-ui,sans-serif" font-weight="700">NEW</text>
+  <text x="494" y="339" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">Real-time security alerts with HIGH/MED/LOW</text>
+  <text x="494" y="357" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">severity. Current site has nothing like this.</text>
+  <text x="494" y="381" fill="#64748B" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Auto-updated threat feed</text>
+
+  <rect x="796" y="278" width="365" height="120" rx="16" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.3"/>
+  <rect x="816" y="299" width="44" height="44" rx="12" fill="#FFFFFF" fill-opacity="0.04"/>
+  <text x="828" y="327" fill="#94A3B8" font-size="16" font-family="system-ui,sans-serif" font-weight="800">📄</text>
+  <text x="872" y="317" fill="#FFFFFF" font-size="16" font-family="system-ui,sans-serif" font-weight="700">Documents &amp; Consultations</text>
+  <text x="872" y="339" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">Legislation, reports, and regulatory</text>
+  <text x="872" y="357" fill="#8899AC" font-size="12" font-family="system-ui,sans-serif">publications. Public input on new rules.</text>
+  <text x="872" y="381" fill="#64748B" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Categorized + searchable</text>
+
+  <!-- ═══ Bottom stats bar ═══ -->
+  <rect x="40" y="420" width="1120" height="72" rx="14" fill="#0C2340" stroke="#1A3D6B" stroke-opacity="0.3"/>
+  <text x="115" y="455" fill="#FFD100" font-size="30" font-family="system-ui,sans-serif" font-weight="800">6</text>
+  <text x="115" y="476" fill="#64748B" font-size="11" font-family="system-ui,sans-serif">Service portals</text>
+  <line x1="245" y1="438" x2="245" y2="478" stroke="#1A3D6B"/>
+  <text x="310" y="455" fill="#00A651" font-size="30" font-family="system-ui,sans-serif" font-weight="800">2</text>
+  <text x="310" y="476" fill="#64748B" font-size="11" font-family="system-ui,sans-serif">Languages</text>
+  <line x1="420" y1="438" x2="420" y2="478" stroke="#1A3D6B"/>
+  <text x="500" y="455" fill="#0077B6" font-size="30" font-family="system-ui,sans-serif" font-weight="800">4</text>
+  <text x="500" y="476" fill="#64748B" font-size="11" font-family="system-ui,sans-serif">Regulated sectors</text>
+  <line x1="640" y1="438" x2="640" y2="478" stroke="#1A3D6B"/>
+  <text x="720" y="455" fill="#E31B6D" font-size="30" font-family="system-ui,sans-serif" font-weight="800">1</text>
+  <text x="720" y="476" fill="#64748B" font-size="11" font-family="system-ui,sans-serif">AI Assistant</text>
+  <line x1="840" y1="438" x2="840" y2="478" stroke="#1A3D6B"/>
+  <text x="920" y="455" fill="#FFFFFF" fill-opacity="0.6" font-size="30" font-family="system-ui,sans-serif" font-weight="800">∞</text>
+  <text x="920" y="476" fill="#64748B" font-size="11" font-family="system-ui,sans-serif">Mobile-first pages</text>
+</svg>
