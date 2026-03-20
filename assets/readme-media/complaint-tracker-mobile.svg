@@ -1,59 +1,47 @@
-<svg width="900" height="1800" viewBox="0 0 900 1800" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Complaint tracker in iPhone 17 Pro Max mockup">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="1800" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#020617"/>
-      <stop offset="1" stop-color="#111827"/>
-    </linearGradient>
-  </defs>
+<svg width="900" height="1800" viewBox="0 0 900 1800" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Complaint tracker on iPhone mockup">
+  <rect width="900" height="1800" fill="#EEF1F5"/>
+  <rect x="170" y="90" width="560" height="1620" rx="82" fill="#000"/>
+  <rect x="196" y="116" width="508" height="1568" rx="68" fill="white"/>
+  <rect x="360" y="136" width="180" height="34" rx="17" fill="#111827"/>
+  <text x="240" y="196" fill="#111827" font-size="30" font-family="Inter,Segoe UI,Arial" font-weight="700">9:41</text>
 
-  <rect width="900" height="1800" fill="url(#bg)"/>
-  <rect x="170" y="70" width="560" height="1660" rx="78" fill="#0F172A" stroke="#94A3B8" stroke-width="6"/>
-  <rect x="205" y="130" width="490" height="1540" rx="58" fill="#F8FAFC"/>
-  <rect x="360" y="102" width="180" height="24" rx="12" fill="#1F2937"/>
+  <rect x="226" y="240" width="448" height="140" rx="26" fill="#0B2A4D"/>
+  <text x="254" y="300" fill="white" font-size="30" font-family="Inter,Segoe UI,Arial" font-weight="700">Complaint Tracker</text>
 
-  <rect x="205" y="130" width="490" height="160" rx="58" fill="#0B2A4D"/>
-  <text x="250" y="215" fill="white" font-size="32" font-family="Inter,Segoe UI,Arial" font-weight="700">Complaint Tracker</text>
-  <rect x="555" y="186" width="120" height="42" rx="12" fill="#1E3A8A"/>
-  <text x="615" y="214" text-anchor="middle" fill="#DBEAFE" font-size="20" font-family="Inter,Segoe UI,Arial">English</text>
+  <circle cx="268" cy="430" r="17" fill="#10B981"/>
+  <circle cx="342" cy="430" r="17" fill="#10B981"/>
+  <circle cx="416" cy="430" r="17" fill="#10B981"/>
+  <circle cx="490" cy="430" r="17" fill="#EC4899"/>
+  <rect x="285" y="425" width="40" height="10" rx="5" fill="#10B981"/>
+  <rect x="359" y="425" width="40" height="10" rx="5" fill="#10B981"/>
+  <rect x="433" y="425" width="40" height="10" rx="5" fill="#10B981"/>
 
-  <circle cx="255" cy="340" r="18" fill="#10B981"/>
-  <circle cx="330" cy="340" r="18" fill="#10B981"/>
-  <circle cx="405" cy="340" r="18" fill="#10B981"/>
-  <circle cx="480" cy="340" r="18" fill="#E11D48"/>
-  <rect x="273" y="335" width="39" height="10" rx="5" fill="#10B981"/>
-  <rect x="348" y="335" width="39" height="10" rx="5" fill="#10B981"/>
-  <rect x="423" y="335" width="39" height="10" rx="5" fill="#10B981"/>
+  <rect x="226" y="472" width="448" height="720" rx="24" fill="#F3F4F6" stroke="#E5E7EB"/>
+  <text x="254" y="530" fill="#111827" font-size="30" font-family="Inter,Segoe UI,Arial" font-weight="700">Review Your Complaint</text>
 
-  <rect x="235" y="390" width="430" height="650" rx="24" fill="#E2E8F0"/>
-  <text x="265" y="450" fill="#0F172A" font-size="30" font-family="Inter,Segoe UI,Arial" font-weight="700">Review Your Complaint</text>
+  <text x="254" y="586" fill="#6B7280" font-size="22" font-family="Inter,Segoe UI,Arial">Provider</text>
+  <text x="452" y="586" fill="#111827" font-size="22" font-family="Inter,Segoe UI,Arial">Other</text>
+  <line x1="254" y1="605" x2="646" y2="605" stroke="#D1D5DB"/>
 
-  <text x="265" y="510" fill="#334155" font-size="23" font-family="Inter,Segoe UI,Arial">Provider</text>
-  <text x="460" y="510" fill="#0F172A" font-size="23" font-family="Inter,Segoe UI,Arial">Other</text>
-  <line x1="265" y1="532" x2="635" y2="532" stroke="#CBD5E1"/>
+  <text x="254" y="652" fill="#6B7280" font-size="22" font-family="Inter,Segoe UI,Arial">Category</text>
+  <text x="452" y="652" fill="#111827" font-size="22" font-family="Inter,Segoe UI,Arial">Billing &amp; Charges</text>
+  <line x1="254" y1="671" x2="646" y2="671" stroke="#D1D5DB"/>
 
-  <text x="265" y="575" fill="#334155" font-size="23" font-family="Inter,Segoe UI,Arial">Category</text>
-  <text x="460" y="575" fill="#0F172A" font-size="23" font-family="Inter,Segoe UI,Arial">Billing &amp; Charges</text>
-  <line x1="265" y1="597" x2="635" y2="597" stroke="#CBD5E1"/>
+  <text x="254" y="718" fill="#6B7280" font-size="22" font-family="Inter,Segoe UI,Arial">Date</text>
+  <text x="452" y="718" fill="#111827" font-size="22" font-family="Inter,Segoe UI,Arial">2026-03-10</text>
+  <line x1="254" y1="737" x2="646" y2="737" stroke="#D1D5DB"/>
 
-  <text x="265" y="640" fill="#334155" font-size="23" font-family="Inter,Segoe UI,Arial">Date</text>
-  <text x="460" y="640" fill="#0F172A" font-size="23" font-family="Inter,Segoe UI,Arial">2026-03-10</text>
-  <line x1="265" y1="662" x2="635" y2="662" stroke="#CBD5E1"/>
+  <text x="254" y="784" fill="#6B7280" font-size="22" font-family="Inter,Segoe UI,Arial">Status</text>
+  <text x="452" y="784" fill="#059669" font-size="22" font-family="Inter,Segoe UI,Arial" font-weight="700">Under Review</text>
 
-  <text x="265" y="705" fill="#334155" font-size="23" font-family="Inter,Segoe UI,Arial">Contact</text>
-  <text x="460" y="705" fill="#0F172A" font-size="23" font-family="Inter,Segoe UI,Arial">+267 77 625 997</text>
-  <line x1="265" y1="727" x2="635" y2="727" stroke="#CBD5E1"/>
+  <rect x="254" y="1030" width="392" height="78" rx="16" fill="#DCFCE7"/>
+  <text x="280" y="1079" fill="#166534" font-size="23" font-family="Inter,Segoe UI,Arial">Information looks good to submit</text>
 
-  <text x="265" y="770" fill="#334155" font-size="23" font-family="Inter,Segoe UI,Arial">Status</text>
-  <text x="460" y="770" fill="#047857" font-size="23" font-family="Inter,Segoe UI,Arial" font-weight="700">Under Review</text>
+  <rect x="254" y="1140" width="150" height="70" rx="18" fill="#E5E7EB"/>
+  <text x="329" y="1185" text-anchor="middle" fill="#374151" font-size="26" font-family="Inter,Segoe UI,Arial">Back</text>
+  <rect x="424" y="1140" width="222" height="70" rx="18" fill="#16A34A"/>
+  <text x="535" y="1185" text-anchor="middle" fill="white" font-size="24" font-family="Inter,Segoe UI,Arial" font-weight="700">Submit</text>
 
-  <rect x="235" y="1075" width="430" height="84" rx="18" fill="#DCFCE7"/>
-  <text x="265" y="1128" fill="#166534" font-size="24" font-family="Inter,Segoe UI,Arial">Information confirmed and ready.</text>
-
-  <rect x="235" y="1200" width="160" height="72" rx="18" fill="#E5E7EB"/>
-  <text x="315" y="1246" text-anchor="middle" fill="#334155" font-size="26" font-family="Inter,Segoe UI,Arial">Back</text>
-  <rect x="425" y="1200" width="240" height="72" rx="18" fill="#16A34A"/>
-  <text x="545" y="1246" text-anchor="middle" fill="white" font-size="25" font-family="Inter,Segoe UI,Arial" font-weight="700">Submit Complaint</text>
-
-  <text x="450" y="1440" text-anchor="middle" fill="#CBD5E1" font-size="28" font-family="Inter,Segoe UI,Arial" font-weight="700">iPhone 17 Pro Max Mockup</text>
-  <text x="450" y="1480" text-anchor="middle" fill="#93C5FD" font-size="23" font-family="Inter,Segoe UI,Arial">Complaint review and tracking flow</text>
+  <text x="450" y="1320" text-anchor="middle" fill="#111827" font-size="28" font-family="Inter,Segoe UI,Arial" font-weight="700">iPhone Walkthrough Mockup</text>
+  <rect x="380" y="1638" width="140" height="8" rx="4" fill="#111827"/>
 </svg>

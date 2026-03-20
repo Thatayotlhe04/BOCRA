@@ -1,51 +1,35 @@
-<svg width="900" height="1800" viewBox="0 0 900 1800" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BOCRA AI chatbot in iPhone 17 Pro Max mockup">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="1800" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#020617"/>
-      <stop offset="1" stop-color="#0F172A"/>
-    </linearGradient>
-    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#0B2447"/>
-      <stop offset="1" stop-color="#123B6A"/>
-    </linearGradient>
-  </defs>
+<svg width="900" height="1800" viewBox="0 0 900 1800" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BOCRA AI chatbot on iPhone mockup">
+  <rect width="900" height="1800" fill="#EEF1F5"/>
+  <rect x="170" y="90" width="560" height="1620" rx="82" fill="#000"/>
+  <rect x="196" y="116" width="508" height="1568" rx="68" fill="white"/>
+  <rect x="360" y="136" width="180" height="34" rx="17" fill="#111827"/>
+  <text x="240" y="196" fill="#111827" font-size="30" font-family="Inter,Segoe UI,Arial" font-weight="700">9:41</text>
+  <rect x="600" y="184" width="70" height="10" rx="5" fill="#111827"/>
 
-  <rect width="900" height="1800" fill="url(#bg)"/>
-  <rect x="170" y="70" width="560" height="1660" rx="78" fill="#111827" stroke="#94A3B8" stroke-width="6"/>
-  <rect x="205" y="130" width="490" height="1540" rx="58" fill="url(#screen)"/>
-  <rect x="360" y="102" width="180" height="24" rx="12" fill="#1F2937"/>
+  <rect x="226" y="240" width="448" height="155" rx="26" fill="#0B2A4D"/>
+  <text x="254" y="300" fill="white" font-size="30" font-family="Inter,Segoe UI,Arial" font-weight="700">BOCRA Home</text>
+  <text x="254" y="340" fill="#BFDBFE" font-size="21" font-family="Inter,Segoe UI,Arial">Instant help for complaints and licensing</text>
 
-  <text x="240" y="220" fill="#E2E8F0" font-size="34" font-family="Inter,Segoe UI,Arial" font-weight="700">BOCRA Home</text>
-  <rect x="560" y="182" width="110" height="42" rx="12" fill="#1E3A8A"/>
-  <text x="615" y="210" text-anchor="middle" fill="#DBEAFE" font-size="20" font-family="Inter,Segoe UI,Arial">Setswana</text>
+  <rect x="226" y="425" width="448" height="82" rx="20" fill="#EFF6FF" stroke="#93C5FD"/>
+  <text x="252" y="478" fill="#64748B" font-size="22" font-family="Inter,Segoe UI,Arial">Search services and regulations...</text>
 
-  <rect x="235" y="270" width="430" height="90" rx="24" fill="#1E40AF" fill-opacity="0.32" stroke="#60A5FA"/>
-  <text x="260" y="325" fill="#93C5FD" font-size="26" font-family="Inter,Segoe UI,Arial">Search services and regulations...</text>
+  <rect x="335" y="550" width="340" height="640" rx="28" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <rect x="335" y="550" width="340" height="88" rx="28" fill="#0F172A"/>
+  <text x="390" y="606" fill="#F8FAFC" font-size="30" font-family="Inter,Segoe UI,Arial" font-weight="700">BOCRA AI</text>
+  <circle cx="366" cy="594" r="14" fill="#2563EB"/>
 
-  <rect x="235" y="410" width="430" height="170" rx="24" fill="#FDF2F8"/>
-  <text x="260" y="470" fill="#9D174D" font-size="24" font-family="Inter,Segoe UI,Arial" font-weight="700">File or Track a Complaint</text>
-  <text x="260" y="510" fill="#475569" font-size="21" font-family="Inter,Segoe UI,Arial">Submit complaints and monitor status</text>
-  <rect x="260" y="530" width="200" height="36" rx="18" fill="#E11D48"/>
-  <text x="360" y="554" text-anchor="middle" fill="white" font-size="18" font-family="Inter,Segoe UI,Arial" font-weight="700">File Complaint</text>
+  <rect x="356" y="672" width="296" height="212" rx="20" fill="#E5E7EB"/>
+  <text x="376" y="725" fill="#1F2937" font-size="24" font-family="Inter,Segoe UI,Arial">Dumelang! I can help with:</text>
+  <text x="376" y="764" fill="#374151" font-size="21" font-family="Inter,Segoe UI,Arial">• Complaint status</text>
+  <text x="376" y="798" fill="#374151" font-size="21" font-family="Inter,Segoe UI,Arial">• Licensing rules</text>
+  <text x="376" y="832" fill="#374151" font-size="21" font-family="Inter,Segoe UI,Arial">• BOCRA services</text>
 
-  <rect x="340" y="680" width="330" height="640" rx="28" fill="#F8FAFC"/>
-  <rect x="340" y="680" width="330" height="82" rx="28" fill="#0F172A"/>
-  <text x="395" y="732" fill="#F8FAFC" font-size="28" font-family="Inter,Segoe UI,Arial" font-weight="700">BOCRA AI</text>
-  <circle cx="372" cy="722" r="14" fill="#2563EB"/>
-  <rect x="365" y="715" width="12" height="12" rx="2" fill="white"/>
+  <rect x="356" y="906" width="260" height="46" rx="23" fill="#DBEAFE"/>
+  <text x="376" y="936" fill="#1E40AF" font-size="20" font-family="Inter,Segoe UI,Arial">How do I file a complaint?</text>
 
-  <rect x="360" y="790" width="290" height="190" rx="20" fill="#E2E8F0"/>
-  <text x="378" y="840" fill="#1E293B" font-size="23" font-family="Inter,Segoe UI,Arial">Dumelang! I can help with</text>
-  <text x="378" y="876" fill="#334155" font-size="21" font-family="Inter,Segoe UI,Arial">• Licensing information</text>
-  <text x="378" y="910" fill="#334155" font-size="21" font-family="Inter,Segoe UI,Arial">• Complaint status tracking</text>
-  <text x="378" y="944" fill="#334155" font-size="21" font-family="Inter,Segoe UI,Arial">• Regulatory FAQs</text>
+  <rect x="356" y="1110" width="296" height="64" rx="18" fill="#F3F4F6" stroke="#D1D5DB"/>
+  <text x="378" y="1151" fill="#9CA3AF" font-size="22" font-family="Inter,Segoe UI,Arial">Ask BOCRA AI...</text>
 
-  <rect x="360" y="1004" width="240" height="46" rx="23" fill="#DBEAFE"/>
-  <text x="380" y="1034" fill="#1E3A8A" font-size="20" font-family="Inter,Segoe UI,Arial">How do I file a complaint?</text>
-
-  <rect x="360" y="1220" width="290" height="70" rx="20" fill="#E2E8F0"/>
-  <text x="380" y="1264" fill="#64748B" font-size="22" font-family="Inter,Segoe UI,Arial">Ask BOCRA AI...</text>
-
-  <text x="450" y="1440" text-anchor="middle" fill="#CBD5E1" font-size="28" font-family="Inter,Segoe UI,Arial" font-weight="700">iPhone 17 Pro Max Mockup</text>
-  <text x="450" y="1480" text-anchor="middle" fill="#93C5FD" font-size="23" font-family="Inter,Segoe UI,Arial">BOCRA AI use case preview</text>
+  <text x="450" y="1308" text-anchor="middle" fill="#111827" font-size="28" font-family="Inter,Segoe UI,Arial" font-weight="700">iPhone Walkthrough Mockup</text>
+  <rect x="380" y="1638" width="140" height="8" rx="4" fill="#111827"/>
 </svg>

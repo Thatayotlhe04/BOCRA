@@ -19,7 +19,7 @@
 
 ## Hero Demo: Website Functionality at a Glance
 
-![BOCRA Hero Functionality Demo](assets/readme-media/hero-functionality-demo.svg)
+<img src="./assets/readme-media/hero-functionality-demo.svg" alt="BOCRA Hero Functionality Demo" width="820" />
 
 ### What users can do immediately
 - **File a complaint** with a guided 4-step flow (Provider → Issue Details → Evidence → Review).
@@ -33,13 +33,13 @@
 > All visuals below are presented in an **iPhone 17 Pro Max-style mockup** to better reflect real mobile usage.
 
 ### BOCRA AI Chatbot
-![BOCRA AI Chatbot](assets/readme-media/bocra-ai-chatbot.svg)
+<img src="./assets/readme-media/bocra-ai-chatbot.svg" alt="BOCRA AI Chatbot" width="420" />
 
 ### Complaint Tracker (Mobile View)
-![Complaint Tracker Mobile](assets/readme-media/complaint-tracker-mobile.svg)
+<img src="./assets/readme-media/complaint-tracker-mobile.svg" alt="Complaint Tracker Mobile" width="420" />
 
 ### English / Setswana Toggle
-![Language Toggle](assets/readme-media/language-toggle.svg)
+<img src="./assets/readme-media/language-toggle.svg" alt="Language Toggle" width="420" />
 
 > These visuals are polished README showcase graphics (so your project still looks great even before final production screenshots/GIF captures).
 
