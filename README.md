@@ -1,22 +1,34 @@
-<![CDATA[<div align="center">
+# 🚀 LIVE DEMO: https://bocra-web.vercel.app
+
+<div align="center">
 
 # 🔵🟢🔴🟡 BOCRA Digital Platform
 
 **A modern, citizen-centric regulatory platform for Botswana**
 
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org/)
 [![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org/)
 [![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000?style=for-the-badge&logo=vercel)](https://vercel.com/)
 
----
-
-### 🚀 [**Live Demo →** https://bocra-web.vercel.app](https://bocra-web.vercel.app)
-
----
+### 👉 [Open the Live Platform](https://bocra-web.vercel.app)
 
 </div>
+
+---
+
+## Visual Highlights
+
+### BOCRA AI Chatbot
+![BOCRA AI Chatbot](assets/readme-media/bocra-ai-chatbot.svg)
+
+### Complaint Tracker (Mobile View)
+![Complaint Tracker Mobile](assets/readme-media/complaint-tracker-mobile.svg)
+
+### English / Setswana Toggle
+![Language Toggle](assets/readme-media/language-toggle.svg)
+
+> These visuals are polished README showcase graphics (so your project still looks great even before final production screenshots/GIF captures).
 
 ## The Problem
 
@@ -25,34 +37,6 @@ BOCRA's current website is outdated — a COVID-19 banner still dominates the ho
 ## Our Solution
 
 A complete reimagining of BOCRA's digital presence as a **task-first, citizen-centric platform** that puts services front and center, makes complaints trackable in real time, and introduces AI-powered assistance for regulatory queries.
-
-<div align="center">
-
-### Homepage — Task-First Design
-<!-- Replace with actual screenshot -->
-![Homepage](https://via.placeholder.com/800x450/0C2340/FFFFFF?text=Homepage+Screenshot)
-
-*"What do you need help with today?" — not a slogan, a service gateway*
-
-### Complaint Tracker — Uber-Style Live Tracking
-<!-- Replace with actual screenshot -->
-![Tracker](https://via.placeholder.com/800x450/0C2340/FFD100?text=Complaint+Tracker+Screenshot)
-
-*Real-time progress bar, pulsing status indicator, staggered timeline animation*
-
-### BOCRA AI — Regulatory Assistant
-<!-- Replace with actual screenshot -->
-![BOCRA AI](https://via.placeholder.com/800x450/0077B6/FFFFFF?text=BOCRA+AI+Chatbot+Screenshot)
-
-*AI-powered assistant for licensing, complaints, and regulatory FAQs*
-
-### Mobile Responsive
-<!-- Replace with actual screenshot -->
-![Mobile](https://via.placeholder.com/400x700/E31B6D/FFFFFF?text=Mobile+View+Screenshot)
-
-*73% of Batswana access the web on phones — mobile-first is non-negotiable*
-
-</div>
 
 ## Key Features
 
@@ -163,4 +147,3 @@ Open [http://localhost:3000](http://localhost:3000).
 **Regulating for a Connected Botswana**
 
 </div>
-]]>

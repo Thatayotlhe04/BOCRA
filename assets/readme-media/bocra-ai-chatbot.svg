@@ -1,0 +1,41 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BOCRA AI chatbot preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B2447"/>
+      <stop offset="1" stop-color="#123B6A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0E2D57"/>
+      <stop offset="1" stop-color="#0B2140"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="155" cy="520" r="170" fill="#0EA5E9" fill-opacity="0.15"/>
+  <circle cx="1080" cy="120" r="180" fill="#2563EB" fill-opacity="0.1"/>
+  <text x="70" y="90" fill="white" font-size="52" font-family="Inter,Segoe UI,Arial" font-weight="700">BOCRA Digital Platform</text>
+  <text x="70" y="140" fill="#BFDBFE" font-size="28" font-family="Inter,Segoe UI,Arial">Citizen services + intelligent regulatory support</text>
+
+  <rect x="620" y="150" width="500" height="450" rx="24" fill="url(#card)" stroke="#60A5FA" stroke-opacity="0.35"/>
+  <rect x="620" y="150" width="500" height="85" rx="24" fill="#0A1F3D"/>
+  <text x="680" y="202" fill="white" font-size="34" font-family="Inter,Segoe UI,Arial" font-weight="700">BOCRA AI</text>
+  <circle cx="651" cy="192" r="16" fill="#1D4ED8"/>
+  <rect x="665" y="175" width="14" height="14" rx="3" fill="white" fill-opacity="0.9"/>
+
+  <rect x="655" y="260" width="430" height="150" rx="18" fill="#E2E8F0"/>
+  <text x="680" y="305" fill="#1E293B" font-size="29" font-family="Inter,Segoe UI,Arial" font-weight="600">Dumelang! I can help with:</text>
+  <text x="680" y="345" fill="#334155" font-size="26" font-family="Inter,Segoe UI,Arial">• Complaint status</text>
+  <text x="680" y="378" fill="#334155" font-size="26" font-family="Inter,Segoe UI,Arial">• Licensing requirements</text>
+
+  <rect x="655" y="435" width="300" height="56" rx="28" fill="#DBEAFE"/>
+  <text x="690" y="472" fill="#1E3A8A" font-size="24" font-family="Inter,Segoe UI,Arial">How do I file a complaint?</text>
+
+  <rect x="655" y="520" width="430" height="56" rx="18" fill="#0F294D" stroke="#3B82F6"/>
+  <text x="685" y="557" fill="#93C5FD" font-size="23" font-family="Inter,Segoe UI,Arial">Ask BOCRA AI anything…</text>
+
+  <text x="70" y="290" fill="#F8FAFC" font-size="42" font-family="Inter,Segoe UI,Arial" font-weight="700">AI Chatbot</text>
+  <text x="70" y="345" fill="#BFDBFE" font-size="27" font-family="Inter,Segoe UI,Arial">Multilingual, always-on assistant for</text>
+  <text x="70" y="382" fill="#BFDBFE" font-size="27" font-family="Inter,Segoe UI,Arial">regulatory guidance and service discovery.</text>
+
+  <rect x="70" y="430" width="330" height="64" rx="32" fill="#E11D48"/>
+  <text x="120" y="472" fill="white" font-size="28" font-family="Inter,Segoe UI,Arial" font-weight="700">Live Preview Artwork</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg width="675" height="1200" viewBox="0 0 675 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mobile complaint tracker preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="675" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08203E"/>
+      <stop offset="1" stop-color="#123764"/>
+    </linearGradient>
+  </defs>
+  <rect width="675" height="1200" fill="url(#bg)"/>
+  <rect x="108" y="45" width="460" height="1110" rx="54" fill="#0B1F3D" stroke="#93C5FD" stroke-opacity="0.45" stroke-width="4"/>
+  <rect x="132" y="95" width="412" height="980" rx="36" fill="#F8FAFC"/>
+  <text x="170" y="170" fill="#0F172A" font-size="34" font-family="Inter,Segoe UI,Arial" font-weight="700">Track Complaint</text>
+
+  <circle cx="190" cy="240" r="20" fill="#10B981"/>
+  <circle cx="280" cy="240" r="20" fill="#10B981"/>
+  <circle cx="370" cy="240" r="20" fill="#10B981"/>
+  <circle cx="460" cy="240" r="20" fill="#E11D48"/>
+  <rect x="210" y="236" width="50" height="8" rx="4" fill="#10B981"/>
+  <rect x="300" y="236" width="50" height="8" rx="4" fill="#10B981"/>
+  <rect x="390" y="236" width="50" height="8" rx="4" fill="#10B981"/>
+
+  <rect x="160" y="300" width="356" height="480" rx="24" fill="#E2E8F0"/>
+  <text x="185" y="350" fill="#1E293B" font-size="25" font-family="Inter,Segoe UI,Arial" font-weight="700">Review Your Complaint</text>
+  <text x="185" y="405" fill="#334155" font-size="22" font-family="Inter,Segoe UI,Arial">Provider</text>
+  <text x="360" y="405" fill="#0F172A" font-size="22" font-family="Inter,Segoe UI,Arial">Other</text>
+  <text x="185" y="455" fill="#334155" font-size="22" font-family="Inter,Segoe UI,Arial">Category</text>
+  <text x="360" y="455" fill="#0F172A" font-size="22" font-family="Inter,Segoe UI,Arial">Billing</text>
+  <text x="185" y="505" fill="#334155" font-size="22" font-family="Inter,Segoe UI,Arial">Date</text>
+  <text x="360" y="505" fill="#0F172A" font-size="22" font-family="Inter,Segoe UI,Arial">2026-03-10</text>
+  <text x="185" y="555" fill="#334155" font-size="22" font-family="Inter,Segoe UI,Arial">Status</text>
+  <text x="360" y="555" fill="#047857" font-size="22" font-family="Inter,Segoe UI,Arial" font-weight="700">Under Review</text>
+
+  <rect x="160" y="820" width="356" height="74" rx="18" fill="#DCFCE7"/>
+  <text x="185" y="865" fill="#166534" font-size="22" font-family="Inter,Segoe UI,Arial">Information verified</text>
+
+  <rect x="160" y="930" width="150" height="70" rx="18" fill="#E2E8F0"/>
+  <text x="210" y="973" fill="#334155" font-size="26" font-family="Inter,Segoe UI,Arial" text-anchor="middle">Back</text>
+  <rect x="330" y="930" width="186" height="70" rx="18" fill="#16A34A"/>
+  <text x="423" y="973" fill="white" font-size="25" font-family="Inter,Segoe UI,Arial" text-anchor="middle" font-weight="700">Submit</text>
+
+  <text x="337" y="1120" fill="#BFDBFE" font-size="28" text-anchor="middle" font-family="Inter,Segoe UI,Arial">Mobile-first Complaint Tracker</text>
+</svg>
