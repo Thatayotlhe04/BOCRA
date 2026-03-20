@@ -1,0 +1,96 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wbg2" x1="0" y1="0" x2="1200" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C2340"/><stop offset="1" stop-color="#0A1628"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="520" rx="16" fill="url(#wbg2)"/>
+
+  <!-- Header -->
+  <rect x="40" y="32" width="12" height="12" rx="6" fill="#0077B6"/>
+  <text x="62" y="43" fill="#0077B6" font-size="12" font-family="system-ui,sans-serif" font-weight="700" letter-spacing="2">FEATURE 02</text>
+  <text x="40" y="82" fill="#FFFFFF" font-size="30" font-family="system-ui,sans-serif" font-weight="800">BOCRA AI Assistant</text>
+  <text x="40" y="110" fill="#64748B" font-size="16" font-family="system-ui,sans-serif">Bilingual AI chatbot — regulatory guidance at your fingertips</text>
+
+  <!-- ═══ Chat Window ═══ -->
+  <rect x="40" y="145" width="420" height="340" rx="18" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.5"/>
+  <!-- Chat header -->
+  <rect x="40" y="145" width="420" height="56" rx="18" fill="#0A1F3D"/>
+  <rect x="58" y="160" width="32" height="32" rx="9" fill="#0077B6" fill-opacity="0.2"/>
+  <text x="67" y="181" fill="#60A5FA" font-size="14" font-family="system-ui,sans-serif" font-weight="800">AI</text>
+  <text x="100" y="175" fill="#FFFFFF" font-size="14" font-family="system-ui,sans-serif" font-weight="700">BOCRA AI</text>
+  <circle cx="100" cy="190" r="3" fill="#00A651"/>
+  <text x="108" y="194" fill="#FFFFFF" fill-opacity="0.35" font-size="10" font-family="system-ui,sans-serif">Online — English</text>
+
+  <!-- Bot greeting -->
+  <rect x="60" y="218" width="320" height="52" rx="14" fill="#132E4F"/>
+  <text x="78" y="240" fill="#CBD5E1" font-size="12" font-family="system-ui,sans-serif" font-weight="500">Dumelang! 👋 I can help with licensing,</text>
+  <text x="78" y="258" fill="#CBD5E1" font-size="12" font-family="system-ui,sans-serif" font-weight="500">complaints, and regulatory queries.</text>
+
+  <!-- Suggestion chips -->
+  <rect x="60" y="282" width="178" height="28" rx="14" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+  <text x="78" y="301" fill="#94A3B8" font-size="11" font-family="system-ui,sans-serif">How do I file a complaint?</text>
+  <rect x="248" y="282" width="148" height="28" rx="14" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+  <text x="266" y="301" fill="#94A3B8" font-size="11" font-family="system-ui,sans-serif">Check license status</text>
+
+  <!-- User message -->
+  <rect x="200" y="324" width="240" height="36" rx="14" fill="#0077B6"/>
+  <text x="220" y="348" fill="#FFFFFF" font-size="12" font-family="system-ui,sans-serif" font-weight="500">What is Type Approval?</text>
+
+  <!-- Bot response -->
+  <rect x="60" y="374" width="340" height="68" rx="14" fill="#132E4F"/>
+  <text x="78" y="396" fill="#CBD5E1" font-size="12" font-family="system-ui,sans-serif">Type Approval is BOCRA's process for</text>
+  <text x="78" y="414" fill="#CBD5E1" font-size="12" font-family="system-ui,sans-serif">certifying telecom equipment before it</text>
+  <text x="78" y="432" fill="#CBD5E1" font-size="12" font-family="system-ui,sans-serif">can be sold or used in Botswana.</text>
+
+  <!-- Input bar -->
+  <rect x="58" y="454" width="330" height="16" rx="8" fill="#0A1F3D" stroke="#1A3D6B"/>
+
+  <!-- ═══ Right: Capabilities ═══ -->
+  <text x="520" y="172" fill="#FFFFFF" font-size="18" font-family="system-ui,sans-serif" font-weight="700">What It Can Do</text>
+
+  <!-- Capability cards -->
+  <rect x="520" y="195" width="300" height="50" rx="12" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.3"/>
+  <rect x="536" y="208" width="26" height="26" rx="7" fill="#0077B6" fill-opacity="0.15"/>
+  <text x="543" y="226" fill="#60A5FA" font-size="12" font-family="system-ui,sans-serif" font-weight="800">?</text>
+  <text x="574" y="222" fill="#CBD5E1" font-size="12" font-family="system-ui,sans-serif">Answers regulatory FAQs instantly</text>
+
+  <rect x="520" y="255" width="300" height="50" rx="12" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.3"/>
+  <rect x="536" y="268" width="26" height="26" rx="7" fill="#E31B6D" fill-opacity="0.15"/>
+  <text x="543" y="286" fill="#F472B6" font-size="12" font-family="system-ui,sans-serif" font-weight="800">!</text>
+  <text x="574" y="282" fill="#CBD5E1" font-size="12" font-family="system-ui,sans-serif">Guides complaint filing process</text>
+
+  <rect x="520" y="315" width="300" height="50" rx="12" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.3"/>
+  <rect x="536" y="328" width="26" height="26" rx="7" fill="#00A651" fill-opacity="0.15"/>
+  <text x="542" y="346" fill="#4ADE80" font-size="12" font-family="system-ui,sans-serif" font-weight="800">L</text>
+  <text x="574" y="342" fill="#CBD5E1" font-size="12" font-family="system-ui,sans-serif">License requirements lookup</text>
+
+  <rect x="520" y="375" width="300" height="50" rx="12" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.3"/>
+  <rect x="536" y="388" width="26" height="26" rx="7" fill="#FFD100" fill-opacity="0.15"/>
+  <text x="540" y="406" fill="#FACC15" font-size="11" font-family="system-ui,sans-serif" font-weight="800">EN</text>
+  <text x="574" y="402" fill="#CBD5E1" font-size="12" font-family="system-ui,sans-serif">Bilingual: English + Setswana</text>
+
+  <rect x="520" y="435" width="300" height="50" rx="12" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.3"/>
+  <rect x="536" y="448" width="26" height="26" rx="7" fill="#FFFFFF" fill-opacity="0.05"/>
+  <text x="543" y="466" fill="#94A3B8" font-size="12" font-family="system-ui,sans-serif" font-weight="800">@</text>
+  <text x="574" y="462" fill="#CBD5E1" font-size="12" font-family="system-ui,sans-serif">Contact info and office hours</text>
+
+  <!-- ═══ Far Right: Key stat ═══ -->
+  <rect x="880" y="145" width="280" height="340" rx="18" fill="#0E2D52" stroke="#1A3D6B" stroke-opacity="0.3"/>
+  <text x="920" y="186" fill="#FFFFFF" font-size="16" font-family="system-ui,sans-serif" font-weight="700">Available On</text>
+  <text x="920" y="210" fill="#64748B" font-size="13" font-family="system-ui,sans-serif">Every page, every device</text>
+
+  <!-- Desktop icon -->
+  <rect x="920" y="240" width="210" height="58" rx="12" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="948" y="274" fill="#94A3B8" font-size="13" font-family="system-ui,sans-serif">Desktop — bottom right FAB</text>
+
+  <!-- Mobile icon -->
+  <rect x="920" y="308" width="210" height="58" rx="12" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="948" y="342" fill="#94A3B8" font-size="13" font-family="system-ui,sans-serif">Mobile — full-width panel</text>
+
+  <!-- Powered by -->
+  <rect x="920" y="390" width="210" height="72" rx="12" fill="#0077B6" fill-opacity="0.08" stroke="#0077B6" stroke-opacity="0.2"/>
+  <text x="948" y="418" fill="#60A5FA" font-size="12" font-family="system-ui,sans-serif" font-weight="700">Powered by Gemini</text>
+  <text x="948" y="440" fill="#475569" font-size="11" font-family="system-ui,sans-serif">Canned responses now,</text>
+  <text x="948" y="454" fill="#475569" font-size="11" font-family="system-ui,sans-serif">full AI on Day 3+</text>
+</svg>
