@@ -29,6 +29,28 @@ CREATE TABLE IF NOT EXISTS complaint_timeline (
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
+-- ── 2b. Complaint evidence metadata ──
+CREATE TABLE IF NOT EXISTS complaint_evidence (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  complaint_id TEXT NOT NULL REFERENCES complaints(id) ON DELETE CASCADE,
+  file_name TEXT NOT NULL,
+  file_path TEXT NOT NULL UNIQUE,
+  file_type TEXT NOT NULL,
+  file_size BIGINT NOT NULL,
+  uploaded_by TEXT NOT NULL DEFAULT 'citizen',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+-- ── 2c. Complaint audit logs ──
+CREATE TABLE IF NOT EXISTS complaint_audit_logs (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  complaint_id TEXT NOT NULL REFERENCES complaints(id) ON DELETE CASCADE,
+  action TEXT NOT NULL,
+  actor TEXT NOT NULL,
+  meta JSONB NOT NULL DEFAULT '{}'::jsonb,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
 -- ── 3. Auto-update updated_at ──
 CREATE OR REPLACE FUNCTION update_updated_at()
 RETURNS TRIGGER AS $$
@@ -57,6 +79,8 @@ CREATE TRIGGER complaints_updated_at
 
 ALTER TABLE complaints ENABLE ROW LEVEL SECURITY;
 ALTER TABLE complaint_timeline ENABLE ROW LEVEL SECURITY;
+ALTER TABLE complaint_evidence ENABLE ROW LEVEL SECURITY;
+ALTER TABLE complaint_audit_logs ENABLE ROW LEVEL SECURITY;
 
 -- Anyone can INSERT a complaint (citizens don't need to be logged in)
 CREATE POLICY "Anyone can submit complaints"
@@ -86,6 +110,26 @@ CREATE POLICY "Users can view own complaint timeline"
     )
   );
 
+-- Evidence metadata: inserted by server API, read by complaint owner only
+CREATE POLICY "System can insert evidence metadata"
+  ON complaint_evidence FOR INSERT
+  WITH CHECK (true);
+
+CREATE POLICY "Users can view own evidence metadata"
+  ON complaint_evidence FOR SELECT
+  USING (
+    EXISTS (
+      SELECT 1 FROM complaints
+      WHERE complaints.id = complaint_evidence.complaint_id
+      AND complaints.user_id = auth.uid()
+    )
+  );
+
+-- Audit logs should not be publicly readable, only inserted server-side
+CREATE POLICY "System can insert audit logs"
+  ON complaint_audit_logs FOR INSERT
+  WITH CHECK (true);
+
 -- ── 5. Generate sequential complaint ID ──
 CREATE OR REPLACE FUNCTION generate_complaint_id()
 RETURNS TEXT AS $$
@@ -107,3 +151,10 @@ CREATE INDEX IF NOT EXISTS idx_complaints_user_id ON complaints(user_id);
 CREATE INDEX IF NOT EXISTS idx_complaints_status ON complaints(status);
 CREATE INDEX IF NOT EXISTS idx_complaints_created ON complaints(created_at DESC);
 CREATE INDEX IF NOT EXISTS idx_timeline_complaint_id ON complaint_timeline(complaint_id);
+CREATE INDEX IF NOT EXISTS idx_evidence_complaint_id ON complaint_evidence(complaint_id);
+CREATE INDEX IF NOT EXISTS idx_audit_complaint_id ON complaint_audit_logs(complaint_id);
+
+-- ── 7. Storage bucket for complaint evidence ──
+INSERT INTO storage.buckets (id, name, public)
+VALUES ('complaint-evidence', 'complaint-evidence', false)
+ON CONFLICT (id) DO NOTHING;

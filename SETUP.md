@@ -7,12 +7,16 @@
    - **Project URL** → `NEXT_PUBLIC_SUPABASE_URL`
    - **anon public key** → `NEXT_PUBLIC_SUPABASE_ANON_KEY`
    - **service_role secret key** → `SUPABASE_SERVICE_ROLE_KEY`
+3. Optional admin protection key for status updates:
+   - set `ADMIN_API_KEY` in your server environment
 
 ## 2. Database Schema
 
 1. In Supabase dashboard → **SQL Editor**
 2. Paste the contents of `supabase-schema.sql`
 3. Click **Run**
+
+This creates complaint tables, timeline, evidence metadata, audit logs, and the private `complaint-evidence` storage bucket.
 
 ## 3. Auth
 

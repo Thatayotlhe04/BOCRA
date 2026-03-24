@@ -15,6 +15,9 @@ export default function ComplaintForm() {
   const [submitting, setSubmitting] = useState(false);
   const [genId, setGenId] = useState("");
   const [contactedProvider, setContactedProvider] = useState<boolean | null>(null);
+  const [files, setFiles] = useState<File[]>([]);
+  const [uploadError, setUploadError] = useState("");
+  const [submitError, setSubmitError] = useState("");
   const [form, setForm] = useState({
     provider: "", category: "", desc: "", date: "", phone: "", email: "",
   });
@@ -28,8 +31,43 @@ export default function ComplaintForm() {
     return true;
   };
 
+  const uploadEvidence = async (complaintId: string) => {
+    const failed: string[] = [];
+    for (const file of files) {
+      const meta = await fetch("/api/complaints/evidence", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          complaintId,
+          fileName: file.name,
+          fileType: file.type,
+          fileSize: file.size,
+        }),
+      });
+
+      if (!meta.ok) {
+        failed.push(file.name);
+        continue;
+      }
+      const payload = await meta.json();
+
+      const uploadRes = await fetch(payload.signedUrl, {
+        method: "PUT",
+        headers: {
+          "Content-Type": file.type,
+          "x-upsert": "false",
+        },
+        body: file,
+      });
+      if (!uploadRes.ok) failed.push(file.name);
+    }
+    return failed;
+  };
+
   const handleSubmit = async () => {
     setSubmitting(true);
+    setUploadError("");
+    setSubmitError("");
     try {
       const res = await fetch("/api/complaints", {
         method: "POST",
@@ -40,10 +78,23 @@ export default function ComplaintForm() {
         }),
       });
       const data = await res.json();
-      if (res.ok && data.id) { setGenId(data.id); setSubmitted(true); }
-      else { const fallback = `CMP-2026-${String(Math.floor(1000 + Math.random() * 9000))}`; setGenId(fallback); setSubmitted(true); }
+      if (res.ok && data.id) {
+        if (files.length > 0) {
+          try {
+            const failed = await uploadEvidence(data.id);
+            if (failed.length > 0) {
+              setUploadError(`Complaint submitted, but these files failed to upload: ${failed.join(", ")}`);
+            }
+          } catch {
+            setUploadError("Complaint submitted, but one or more files failed to upload.");
+          }
+        }
+        setGenId(data.id); setSubmitted(true);
+      } else {
+        setSubmitError(data?.error || "Unable to submit complaint right now. Please try again.");
+      }
     } catch {
-      const fallback = `CMP-2026-${String(Math.floor(1000 + Math.random() * 9000))}`; setGenId(fallback); setSubmitted(true);
+      setSubmitError("Network error while submitting complaint. Please check your connection and retry.");
     } finally { setSubmitting(false); }
   };
 
@@ -55,6 +106,7 @@ export default function ComplaintForm() {
         <p className="text-sm text-gray-500 mb-5">Your complaint has been registered. Save your tracking ID:</p>
         <div className="inline-block bg-bocra-navy text-bocra-yellow px-9 py-3.5 rounded-[14px] text-[21px] font-bold tracking-[2px] font-mono mb-5">{genId}</div>
         <p className="text-[13px] text-gray-400 max-w-[380px] mx-auto mb-6 leading-relaxed">You will receive a confirmation email shortly. Use this ID to monitor progress.</p>
+        {uploadError && <p className="text-[13px] text-bocra-magenta mb-3">{uploadError}</p>}
         <div className="flex gap-2.5 justify-center flex-wrap">
           <button onClick={() => router.push(`/complaints/track/${genId}`)} className="bg-bocra-blue text-white px-5 py-2.5 rounded-lg text-[13px] font-semibold transition-all hover:opacity-90">Track This Complaint</button>
           <button onClick={() => router.push("/complaints")} className="bg-transparent border-[1.5px] border-gray-200 text-gray-600 px-5 py-2.5 rounded-lg text-[13px] font-semibold hover:bg-gray-50 transition-all">Back to Complaints</button>
@@ -150,24 +202,28 @@ export default function ComplaintForm() {
           <>
             <h3 className="text-lg font-bold text-gray-900 mb-5">Describe the Issue</h3>
             <div className="mb-4">
-              <label className="text-[13px] font-semibold text-gray-700 block mb-1.5">Category *</label>
+              <label htmlFor="complaint-category" className="text-[13px] font-semibold text-gray-700 block mb-1.5">Category *</label>
               <select value={form.category} onChange={(e) => set("category", e.target.value)}
+                id="complaint-category"
                 className="w-full px-3.5 py-2.5 rounded-lg border-[1.5px] border-gray-200 text-sm font-sans outline-none text-gray-900 bg-white appearance-none pr-10 focus:border-bocra-blue focus:ring-2 focus:ring-bocra-blue/10 transition-all">
                 <option value="">Select a category</option>
                 {categories.map((c) => <option key={c} value={c}>{c}</option>)}
               </select>
             </div>
             <div className="mb-4">
-              <label className="text-[13px] font-semibold text-gray-700 block mb-1.5">Description *</label>
+              <label htmlFor="complaint-description" className="text-[13px] font-semibold text-gray-700 block mb-1.5">Description *</label>
               <textarea value={form.desc} onChange={(e) => set("desc", e.target.value)} placeholder="Include dates, amounts, and reference numbers..."
+                id="complaint-description"
+                aria-describedby="complaint-description-hint"
                 className="w-full px-3.5 py-2.5 rounded-lg border-[1.5px] border-gray-200 text-sm font-sans outline-none text-gray-900 min-h-[110px] resize-y leading-relaxed focus:border-bocra-blue focus:ring-2 focus:ring-bocra-blue/10 transition-all" />
-              {form.desc.length > 0 && form.desc.length <= 10 && <div className="text-xs text-bocra-magenta mt-1">Minimum 10 characters required</div>}
+              <div id="complaint-description-hint" className="sr-only">Minimum 10 characters required.</div>
+              {form.desc.length > 0 && form.desc.length <= 10 && <div className="text-xs text-bocra-magenta mt-1" role="alert">Minimum 10 characters required</div>}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-              <div><label className="text-[13px] font-semibold text-gray-700 block mb-1.5">Date of Incident</label><input type="date" value={form.date} onChange={(e) => set("date", e.target.value)} className="w-full px-3.5 py-2.5 rounded-lg border-[1.5px] border-gray-200 text-sm outline-none text-gray-900 focus:border-bocra-blue transition-all" /></div>
-              <div><label className="text-[13px] font-semibold text-gray-700 block mb-1.5">Contact Number</label><input type="tel" placeholder="+267" value={form.phone} onChange={(e) => set("phone", e.target.value)} className="w-full px-3.5 py-2.5 rounded-lg border-[1.5px] border-gray-200 text-sm outline-none text-gray-900 focus:border-bocra-blue transition-all" /></div>
+              <div><label htmlFor="incident-date" className="text-[13px] font-semibold text-gray-700 block mb-1.5">Date of Incident</label><input id="incident-date" type="date" value={form.date} onChange={(e) => set("date", e.target.value)} className="w-full px-3.5 py-2.5 rounded-lg border-[1.5px] border-gray-200 text-sm outline-none text-gray-900 focus:border-bocra-blue transition-all" /></div>
+              <div><label htmlFor="contact-phone" className="text-[13px] font-semibold text-gray-700 block mb-1.5">Contact Number</label><input id="contact-phone" type="tel" placeholder="+267" value={form.phone} onChange={(e) => set("phone", e.target.value)} className="w-full px-3.5 py-2.5 rounded-lg border-[1.5px] border-gray-200 text-sm outline-none text-gray-900 focus:border-bocra-blue transition-all" /></div>
             </div>
-            <div className="mt-3.5"><label className="text-[13px] font-semibold text-gray-700 block mb-1.5">Email Address</label><input type="email" placeholder="you@example.com" value={form.email} onChange={(e) => set("email", e.target.value)} className="w-full px-3.5 py-2.5 rounded-lg border-[1.5px] border-gray-200 text-sm outline-none text-gray-900 focus:border-bocra-blue transition-all" /></div>
+            <div className="mt-3.5"><label htmlFor="contact-email" className="text-[13px] font-semibold text-gray-700 block mb-1.5">Email Address</label><input id="contact-email" type="email" placeholder="you@example.com" value={form.email} onChange={(e) => set("email", e.target.value)} className="w-full px-3.5 py-2.5 rounded-lg border-[1.5px] border-gray-200 text-sm outline-none text-gray-900 focus:border-bocra-blue transition-all" /></div>
           </>
         )}
 
@@ -175,11 +231,27 @@ export default function ComplaintForm() {
         {step === 3 && (
           <>
             <h3 className="text-lg font-bold text-gray-900 mb-5">Upload Supporting Documents</h3>
-            <div className="border-2 border-dashed border-gray-300 rounded-[14px] py-9 px-5 text-center bg-gray-50 cursor-pointer hover:border-bocra-blue hover:bg-bocra-blue-light transition-all">
+            <label htmlFor="evidence-upload" className="block border-2 border-dashed border-gray-300 rounded-[14px] py-9 px-5 text-center bg-gray-50 cursor-pointer hover:border-bocra-blue hover:bg-bocra-blue-light transition-all">
               <div className="opacity-50 flex justify-center"><UploadIcon color="#0077B6" size={30} /></div>
               <div className="text-sm font-medium text-gray-700 mt-2.5 mb-1">Drag files here or click to browse</div>
               <div className="text-xs text-gray-400">PDF, JPG, PNG — max 10MB each</div>
-            </div>
+            </label>
+            <input
+              id="evidence-upload"
+              type="file"
+              className="hidden"
+              multiple
+              accept=".pdf,.jpg,.jpeg,.png"
+              onChange={(e) => {
+                const selected = Array.from(e.target.files || []);
+                setFiles(selected);
+              }}
+            />
+            {files.length > 0 && (
+              <div className="mt-3 text-xs text-gray-600">
+                Selected: {files.map((f) => f.name).join(", ")}
+              </div>
+            )}
             <div className="mt-4 p-3.5 rounded-[10px] bg-bocra-yellow-light text-[#7A5D00] text-[13px] flex gap-2.5 items-start leading-relaxed">
               <div className="shrink-0 mt-px flex"><DocIcon color="#7A5D00" size={16} /></div>
               <span>Uploading evidence strengthens your case. Include screenshots, bills, or correspondence. This step is optional.</span>
@@ -225,6 +297,9 @@ export default function ComplaintForm() {
             </button>
           )}
         </div>
+        {submitError && (
+          <p className="text-sm text-bocra-magenta mt-3" role="alert">{submitError}</p>
+        )}
       </div>
     </>
   );

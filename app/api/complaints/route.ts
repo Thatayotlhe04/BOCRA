@@ -1,9 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createServerClient } from "@/lib/supabase-server";
+import { checkRateLimit } from "@/lib/rate-limit";
 
 // POST — Submit a new complaint
 export async function POST(req: NextRequest) {
   try {
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    const throttle = checkRateLimit(`complaints-post:${ip}`, 10, 60_000);
+    if (!throttle.allowed) {
+      return NextResponse.json({ error: "Too many requests. Please try again shortly." }, { status: 429 });
+    }
+
     const body = await req.json();
     const { provider, category, description, incident_date, contact_phone, contact_email } = body;
 
@@ -16,6 +23,12 @@ export async function POST(req: NextRequest) {
     }
     if (description.length > 5000) {
       return NextResponse.json({ error: "Description must be under 5000 characters" }, { status: 400 });
+    }
+    if (contact_email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact_email)) {
+      return NextResponse.json({ error: "Please provide a valid email address" }, { status: 400 });
+    }
+    if (contact_phone && !/^[+0-9()\-\s]{6,20}$/.test(contact_phone)) {
+      return NextResponse.json({ error: "Please provide a valid contact phone number" }, { status: 400 });
     }
 
     const supabase = createServerClient();
@@ -71,6 +84,12 @@ export async function POST(req: NextRequest) {
 // No "list all" endpoint — that would be a data leak
 export async function GET(req: NextRequest) {
   try {
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    const throttle = checkRateLimit(`complaints-get:${ip}`, 30, 60_000);
+    if (!throttle.allowed) {
+      return NextResponse.json({ error: "Too many lookup attempts. Please try again shortly." }, { status: 429 });
+    }
+
     const { searchParams } = new URL(req.url);
     const id = searchParams.get("id");
 

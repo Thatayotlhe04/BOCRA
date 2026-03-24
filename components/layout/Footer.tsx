@@ -21,6 +21,7 @@ export default function Footer() {
             <Link href="/" className="block text-xs text-white/35 mb-1.5 hover:text-white/60 transition-colors">Home</Link>
             <Link href="/complaints" className="block text-xs text-white/35 mb-1.5 hover:text-white/60 transition-colors">Complaints</Link>
             <Link href="/licensing" className="block text-xs text-white/35 mb-1.5 hover:text-white/60 transition-colors">Licensing</Link>
+            <Link href="/privacy" className="block text-xs text-white/35 mb-1.5 hover:text-white/60 transition-colors">Privacy Notice</Link>
             <Link href="/login" className="block text-xs text-white/35 mb-1.5 hover:text-white/60 transition-colors">Sign In</Link>
           </div>
 

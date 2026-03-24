@@ -8,8 +8,8 @@ import { MenuIcon, XIcon } from "@/components/icons";
 const links = [
   { label: "Home", href: "/" },
   { label: "Complaints", href: "/complaints" },
-  { label: "Portals", href: "#portals" },
-  { label: "News", href: "#news" },
+  { label: "Portals", href: "/#portals" },
+  { label: "News", href: "/#news" },
 ];
 
 export default function Header() {
@@ -59,13 +59,19 @@ export default function Header() {
             </Link>
           </nav>
 
-          <button className="md:hidden p-1" onClick={() => setMobileOpen(!mobileOpen)}>
+          <button
+            className="md:hidden p-1"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
+          >
             {mobileOpen ? <XIcon color="#fff" /> : <MenuIcon color="#fff" />}
           </button>
         </div>
 
         {mobileOpen && (
-          <div className="md:hidden flex flex-col pb-2 border-t border-white/[0.06]">
+          <div id="mobile-nav" className="md:hidden flex flex-col pb-2 border-t border-white/[0.06]">
             {links.map((link) => {
               const isActive = pathname === link.href;
               return (
