@@ -8,8 +8,8 @@ import { MenuIcon, XIcon } from "@/components/icons";
 const links = [
   { label: "Home", href: "/" },
   { label: "Complaints", href: "/complaints" },
-  { label: "Portals", href: "#portals" },
-  { label: "News", href: "#news" },
+  { label: "Portals", href: "/#portals" },
+  { label: "News", href: "/#news" },
 ];
 
 export default function Header() {
