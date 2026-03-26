@@ -4,7 +4,6 @@ import ServiceCards from "@/components/home/ServiceCards";
 import FeatureWalkthrough from "@/components/home/FeatureWalkthrough";
 import AboutBOCRA from "@/components/home/AboutBOCRA";
 import NewsGrid from "@/components/home/NewsGrid";
-import DocsAndAlerts from "@/components/home/DocsAndAlerts";
 import CTABanner from "@/components/home/CTABanner";
 
 export default function HomePage() {
@@ -20,7 +19,6 @@ export default function HomePage() {
       <FeatureWalkthrough />
       <AboutBOCRA />
       <NewsGrid />
-      <DocsAndAlerts />
       <CTABanner />
     </>
   );
