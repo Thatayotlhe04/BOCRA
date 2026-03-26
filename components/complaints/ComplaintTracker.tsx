@@ -41,14 +41,15 @@ const statusLabels: Record<string, { label: string; desc: string }> = {
 };
 
 function buildStepsFromStatus(status: string, complaint: { created_at: string }): Step[] {
-  const currentIdx = statusOrder.indexOf(status);
+  const normalizedStatus = status === "closed" ? "resolved" : status;
+  const currentIdx = statusOrder.indexOf(normalizedStatus);
   return statusOrder.map((s, i) => ({
     key: s,
     label: statusLabels[s].label,
     desc: statusLabels[s].desc,
     time: i === 0 ? new Date(complaint.created_at).toLocaleDateString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }) : i <= currentIdx ? "Completed" : "Pending",
     done: i <= currentIdx,
-    current: i === currentIdx && status !== "resolved",
+    current: i === currentIdx && normalizedStatus !== "resolved",
   }));
 }
 
@@ -74,12 +75,13 @@ export default function ComplaintTracker({ id }: { id: string }) {
           const json = await res.json();
           if (json.complaint) {
             const c = json.complaint;
+            const normalizedStatus = c.status === "closed" ? "resolved" : c.status;
             const steps = buildStepsFromStatus(c.status, c);
             setData({
               id: c.id,
               provider: c.provider,
               category: c.category,
-              status: c.status,
+              status: normalizedStatus,
               filed: new Date(c.created_at).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }),
               lastUpdate: getRelativeTime(c.updated_at),
               steps,

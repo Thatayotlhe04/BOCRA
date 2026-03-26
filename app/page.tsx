@@ -5,7 +5,6 @@ import FeatureWalkthrough from "@/components/home/FeatureWalkthrough";
 import AboutBOCRA from "@/components/home/AboutBOCRA";
 import SectorGrid from "@/components/home/SectorGrid";
 import NewsGrid from "@/components/home/NewsGrid";
-import DocsAndAlerts from "@/components/home/DocsAndAlerts";
 import CTABanner from "@/components/home/CTABanner";
 
 export default function HomePage() {
@@ -22,7 +21,6 @@ export default function HomePage() {
       <AboutBOCRA />
       <SectorGrid />
       <NewsGrid />
-      <DocsAndAlerts />
       <CTABanner />
     </>
   );
