@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { PhoneIcon, MailIcon, PinIcon } from "@/components/icons";
 
+// Update these URLs if BOCRA's official handles differ.
+const socialLinks = [
+  { label: "Facebook", href: "https://www.facebook.com/BOCRABW", short: "f" },
+  { label: "X", href: "https://x.com/BOCRABW", short: "𝕏" },
+  { label: "YouTube", href: "https://www.youtube.com/@BOCRABW", short: "▶" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/bocra/", short: "in" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-gray-800 mt-12">
@@ -44,8 +52,17 @@ export default function Footer() {
         <div className="border-t border-white/[0.06] py-4 flex justify-between items-center flex-wrap gap-2">
           <span className="text-[11px] text-white/[0.18]">© 2026 BOCRA. All rights reserved.</span>
           <div className="flex gap-1">
-            {["FB", "X", "YT", "In"].map((s) => (
-              <div key={s} className="w-7 h-7 rounded-md bg-white/[0.05] flex items-center justify-center text-[10px] text-white/30 cursor-pointer hover:bg-white/10 hover:text-white/50 transition-all">{s}</div>
+            {socialLinks.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit BOCRA on ${s.label}`}
+                className="w-7 h-7 rounded-md bg-white/[0.05] flex items-center justify-center text-[10px] text-white/55 hover:bg-white/10 hover:text-white/85 transition-all font-semibold"
+              >
+                {s.short}
+              </a>
             ))}
           </div>
         </div>
