@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ComplaintIcon, ArrowRightIcon, CheckIcon, SearchIcon } from "@/components/icons";
 
 const complaintSteps = [
@@ -30,6 +30,15 @@ function BocraDotsSmall() {
 export default function FeatureWalkthrough() {
   const [activeStep, setActiveStep] = useState(0);
   const [activeTab, setActiveTab] = useState<"complaints" | "ai">("complaints");
+  const [hoverEnabled, setHoverEnabled] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const update = () => setHoverEnabled(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
 
   return (
     <section className="relative py-16 md:py-20" id="features">
@@ -48,12 +57,13 @@ export default function FeatureWalkthrough() {
         </div>
 
         {/* ── Elevated card container ── */}
-        <div className="bg-white rounded-[20px] shadow-[0_8px_40px_rgba(0,0,0,0.08),0_1px_3px_rgba(0,0,0,0.04)] border border-gray-100/80 overflow-hidden">
+        <div className="bg-white rounded-[20px] shadow-[0_8px_40px_rgba(0,0,0,0.08),0_1px_3px_rgba(0,0,0,0.04)] border border-gray-100/80 overflow-hidden transition-all duration-500 hover:shadow-[0_15px_48px_rgba(0,0,0,0.12),0_1px_3px_rgba(0,0,0,0.04)]">
 
           {/* Tab bar — embedded in the card */}
           <div className="flex border-b border-gray-100 bg-gray-50/50">
             <button
               onClick={() => setActiveTab("complaints")}
+              onMouseEnter={() => hoverEnabled && setActiveTab("complaints")}
               className={`flex-1 flex items-center justify-center gap-2.5 py-4 text-[13px] font-semibold transition-all duration-200 relative ${
                 activeTab === "complaints"
                   ? "text-bocra-magenta"
@@ -69,6 +79,7 @@ export default function FeatureWalkthrough() {
             <div className="w-px bg-gray-100" />
             <button
               onClick={() => setActiveTab("ai")}
+              onMouseEnter={() => hoverEnabled && setActiveTab("ai")}
               className={`flex-1 flex items-center justify-center gap-2.5 py-4 text-[13px] font-semibold transition-all duration-200 relative ${
                 activeTab === "ai"
                   ? "text-bocra-navy"
@@ -93,10 +104,11 @@ export default function FeatureWalkthrough() {
                     <div
                       key={s.step}
                       onClick={() => setActiveStep(i)}
+                      onMouseEnter={() => hoverEnabled && setActiveStep(i)}
                       className={`rounded-xl p-4 cursor-pointer transition-all duration-300 border ${
                         activeStep === i
                           ? "bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-transparent -translate-y-0.5"
-                          : "bg-transparent border-transparent hover:bg-white/60"
+                          : "bg-transparent border-transparent hover:bg-white/60 hover:-translate-y-0.5"
                       }`}
                     >
                       <div className="flex items-start gap-3.5">
@@ -120,7 +132,7 @@ export default function FeatureWalkthrough() {
                 </div>
 
                 {/* Phone mockup */}
-                <div className="bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)]">
+                <div className="bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] transition-transform duration-500 hover:scale-[1.01]">
                   {/* Browser bar */}
                   <div className="bg-gradient-to-r from-bocra-magenta to-[#B8155A] px-5 py-4">
                     <div className="flex items-center gap-1.5 mb-2.5">
@@ -139,7 +151,7 @@ export default function FeatureWalkthrough() {
                     </div>
                   </div>
 
-                  <div className="p-5 min-h-[280px]">
+                  <div className="p-5 min-h-[280px]" key={activeStep}>
                     {/* Step 0: Provider */}
                     {activeStep === 0 && (
                       <div className="space-y-2">
