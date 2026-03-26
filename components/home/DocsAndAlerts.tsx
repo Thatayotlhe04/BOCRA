@@ -1,4 +1,4 @@
-import { FileIcon, ArrowRightIcon } from "@/components/icons";
+import { FileIcon } from "@/components/icons";
 
 const docs = [
   { title: "Enforcement Guidelines v3", meta: "PDF · 2.1 MB", cat: "Regulation" },
@@ -14,9 +14,7 @@ export default function DocsAndAlerts() {
         <div className="bg-white rounded-card border border-gray-100 p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover">
           <div className="flex justify-between items-center mb-3">
             <h3 className="text-base font-bold text-gray-900">Recent Documents</h3>
-            <button className="text-xs text-bocra-blue font-semibold inline-flex items-center gap-1 hover:text-[#006298] transition-colors group">
-              View All <ArrowRightIcon color="#0077B6" size={12} />
-            </button>
+            <span className="text-xs text-gray-400 font-medium">Latest</span>
           </div>
           {docs.map((d, i) => (
             <div key={i} className={`flex items-center gap-3 py-2.5 cursor-pointer transition-all hover:translate-x-1 hover:opacity-90 ${i < docs.length - 1 ? "border-b border-gray-100" : ""}`}>

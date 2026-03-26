@@ -17,6 +17,12 @@ const searchItems = [
   { label: "Contact BOCRA", desc: "+267 395 7755 · info@bocra.org.bw", href: "#", icon: DocIcon, color: "#0077B6", keywords: "contact phone email address office hours" },
 ];
 
+const localHighlights = [
+  { title: "BOCRA Hackathon", subtitle: "Digital innovation by youth teams", image: "/images/news/hackathon.jpg" },
+  { title: "Regional Collaboration", subtitle: "SADC roaming tariff initiative", image: "/images/news/sadc-roaming.jpg" },
+  { title: "Consumer Impact", subtitle: "Approved data price reductions", image: "/images/news/data-prices.jpg" },
+];
+
 export default function Hero() {
   const router = useRouter();
   const [query, setQuery] = useState("");
@@ -39,7 +45,7 @@ export default function Hero() {
   const navigate = (href: string) => { setQuery(""); setFocused(false); router.push(href); };
 
   return (
-    <section className="relative z-[90] bg-bocra-navy overflow-visible">
+    <section className="relative z-[150] bg-bocra-navy overflow-visible">
       {/* Decorative elements clipped by inner wrapper */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 hero-grid" />
@@ -129,6 +135,26 @@ export default function Hero() {
               <div className="text-center">
                 <div className="text-[20px] md:text-[24px] font-bold text-bocra-blue"><AnimatedNumber target={35000} suffix="+" /></div>
                 <div className="text-[10px] text-white/30 uppercase tracking-wider font-medium">.BW Domains</div>
+              </div>
+            </div>
+
+            <div className="mt-9 animate-fade-up animate-delay-4">
+              <p className="text-center text-[11px] text-white/35 uppercase tracking-[1.2px] mb-3 font-medium">BOCRA in Action</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5">
+                {localHighlights.map((item, i) => (
+                  <div
+                    key={item.title}
+                    className="relative rounded-xl overflow-hidden h-[90px] md:h-[110px] border border-white/10 group"
+                    style={{ animationDelay: `${i * 120}ms` }}
+                  >
+                    <div className="absolute inset-0 bg-cover bg-center scale-105 group-hover:scale-110 transition-transform duration-700" style={{ backgroundImage: `url(${item.image})` }} />
+                    <div className="absolute inset-0 bg-gradient-to-r from-bocra-navy/90 via-bocra-navy/55 to-transparent" />
+                    <div className="relative z-10 p-3.5">
+                      <div className="text-[12px] md:text-[13px] font-semibold text-white">{item.title}</div>
+                      <div className="text-[10px] md:text-[11px] text-white/55 mt-0.5">{item.subtitle}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </>

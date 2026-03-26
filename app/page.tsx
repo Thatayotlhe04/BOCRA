@@ -13,7 +13,7 @@ export default function HomePage() {
     <>
       <Hero />
 
-      <section id="services" className="max-w-[980px] mx-auto px-4 md:px-5 -mt-6 relative z-10">
+      <section id="services" className="max-w-[980px] mx-auto px-4 md:px-5 -mt-6 relative z-[140]">
         <ComplaintStar />
         <div className="mt-4"><ServiceCards /></div>
       </section>
