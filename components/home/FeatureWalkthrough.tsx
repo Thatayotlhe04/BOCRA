@@ -233,11 +233,6 @@ export default function FeatureWalkthrough() {
                   </a>
                 </div>
               </div>
-              {hoverEnabled && (
-                <div className="mt-3 text-[11px] text-gray-400">
-                  Tip: On desktop, hover tabs and steps to preview each state instantly.
-                </div>
-              )}
             </div>
           )}
 
