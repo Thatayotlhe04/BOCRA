@@ -7,6 +7,8 @@ import { ArrowRightIcon, CheckIcon, UploadIcon, DocIcon } from "@/components/ico
 const providers = ["Mascom Wireless", "Orange Botswana", "BTC (Botswana Telecommunications)", "Gabz FM", "Duma FM", "BotswanaPost", "Other"];
 const categories = ["Billing & Charges", "Service Quality", "Network Coverage", "Number Porting", "Contract Dispute", "Data Privacy", "Other"];
 const stepLabels = ["Eligibility", "Provider", "Issue Details", "Evidence", "Review"];
+const allowedMimeTypes = ["application/pdf", "image/jpeg", "image/png"];
+const maxFileSizeBytes = 10 * 1024 * 1024; // 10MB
 
 export default function ComplaintForm() {
   const router = useRouter();
@@ -15,11 +17,48 @@ export default function ComplaintForm() {
   const [submitting, setSubmitting] = useState(false);
   const [genId, setGenId] = useState("");
   const [contactedProvider, setContactedProvider] = useState<boolean | null>(null);
+  const [supportingDocs, setSupportingDocs] = useState<File[]>([]);
+  const [uploadError, setUploadError] = useState("");
   const [form, setForm] = useState({
     provider: "", category: "", desc: "", date: "", phone: "", email: "",
   });
 
   const set = (key: string, val: string) => setForm((p) => ({ ...p, [key]: val }));
+
+  const addFiles = (files: FileList | null) => {
+    if (!files || files.length === 0) return;
+
+    setUploadError("");
+    const selected = Array.from(files);
+    const valid: File[] = [];
+    const invalidReasons: string[] = [];
+
+    selected.forEach((file) => {
+      if (!allowedMimeTypes.includes(file.type)) {
+        invalidReasons.push(`${file.name}: unsupported format`);
+        return;
+      }
+      if (file.size > maxFileSizeBytes) {
+        invalidReasons.push(`${file.name}: exceeds 10MB`);
+        return;
+      }
+      valid.push(file);
+    });
+
+    setSupportingDocs((prev) => {
+      const existing = new Set(prev.map((f) => `${f.name}-${f.size}-${f.lastModified}`));
+      const deduped = valid.filter((f) => !existing.has(`${f.name}-${f.size}-${f.lastModified}`));
+      return [...prev, ...deduped];
+    });
+
+    if (invalidReasons.length > 0) {
+      setUploadError(invalidReasons.join(" • "));
+    }
+  };
+
+  const removeFile = (index: number) => {
+    setSupportingDocs((prev) => prev.filter((_, i) => i !== index));
+  };
 
   const canNext = () => {
     if (step === 0) return contactedProvider === true;
@@ -175,11 +214,57 @@ export default function ComplaintForm() {
         {step === 3 && (
           <>
             <h3 className="text-lg font-bold text-gray-900 mb-5">Upload Supporting Documents</h3>
-            <div className="border-2 border-dashed border-gray-300 rounded-[14px] py-9 px-5 text-center bg-gray-50 cursor-pointer hover:border-bocra-blue hover:bg-bocra-blue-light transition-all">
+            <label
+              className="border-2 border-dashed border-gray-300 rounded-[14px] py-9 px-5 text-center bg-gray-50 cursor-pointer hover:border-bocra-blue hover:bg-bocra-blue-light transition-all block"
+              onDragOver={(e) => e.preventDefault()}
+              onDrop={(e) => {
+                e.preventDefault();
+                addFiles(e.dataTransfer.files);
+              }}
+            >
+              <input
+                type="file"
+                accept=".pdf,image/jpeg,image/png"
+                multiple
+                className="hidden"
+                onChange={(e) => {
+                  addFiles(e.target.files);
+                  e.currentTarget.value = "";
+                }}
+              />
               <div className="opacity-50 flex justify-center"><UploadIcon color="#0077B6" size={30} /></div>
               <div className="text-sm font-medium text-gray-700 mt-2.5 mb-1">Drag files here or click to browse</div>
               <div className="text-xs text-gray-400">PDF, JPG, PNG — max 10MB each</div>
-            </div>
+            </label>
+
+            {uploadError && (
+              <div className="mt-3 text-xs text-bocra-magenta">{uploadError}</div>
+            )}
+
+            {supportingDocs.length > 0 && (
+              <div className="mt-4 rounded-[10px] border border-gray-200 bg-white p-3">
+                <div className="text-[12px] font-semibold text-gray-600 mb-2">
+                  Attached files ({supportingDocs.length})
+                </div>
+                <div className="space-y-2">
+                  {supportingDocs.map((file, index) => (
+                    <div key={`${file.name}-${file.size}-${file.lastModified}`} className="flex items-center justify-between gap-2 rounded-lg bg-gray-50 px-3 py-2">
+                      <div className="min-w-0">
+                        <div className="text-[12px] font-medium text-gray-800 truncate">{file.name}</div>
+                        <div className="text-[11px] text-gray-500">{(file.size / 1024 / 1024).toFixed(2)} MB</div>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => removeFile(index)}
+                        className="text-[11px] text-bocra-magenta font-semibold hover:opacity-80"
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
             <div className="mt-4 p-3.5 rounded-[10px] bg-bocra-yellow-light text-[#7A5D00] text-[13px] flex gap-2.5 items-start leading-relaxed">
               <div className="shrink-0 mt-px flex"><DocIcon color="#7A5D00" size={16} /></div>
               <span>Uploading evidence strengthens your case. Include screenshots, bills, or correspondence. This step is optional.</span>
@@ -192,8 +277,8 @@ export default function ComplaintForm() {
           <>
             <h3 className="text-lg font-bold text-gray-900 mb-5">Review Your Complaint</h3>
             <div className="bg-gray-50 rounded-[10px] p-4 md:p-5">
-              {[["Provider", form.provider], ["Category", form.category], ["Description", form.desc], ["Date", form.date || "—"], ["Contact", form.phone || "—"], ["Email", form.email || "—"]].map(([label, val], i) => (
-                <div key={label} className="flex gap-3.5 py-2.5" style={{ borderBottom: i < 5 ? "1px solid #DEE2E6" : "none" }}>
+              {[["Provider", form.provider], ["Category", form.category], ["Description", form.desc], ["Date", form.date || "—"], ["Contact", form.phone || "—"], ["Email", form.email || "—"], ["Evidence Files", supportingDocs.length > 0 ? `${supportingDocs.length} attached` : "None attached"]].map(([label, val], i) => (
+                <div key={label} className="flex gap-3.5 py-2.5" style={{ borderBottom: i < 6 ? "1px solid #DEE2E6" : "none" }}>
                   <div className="text-[13px] font-semibold text-gray-500 min-w-[95px] shrink-0">{label}</div>
                   <div className="text-sm text-gray-900 break-words leading-relaxed">{val}</div>
                 </div>

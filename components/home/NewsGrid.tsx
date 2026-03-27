@@ -48,7 +48,7 @@ export default function NewsGrid() {
   return (
     <section
       id="news"
-      className="relative overflow-hidden max-w-[980px] mx-auto px-4 md:px-5 py-12 bg-transparent"
+      className="relative z-10 overflow-hidden rounded-2xl border border-white/25 shadow-[0_16px_46px_rgba(12,35,64,0.2)] max-w-[980px] mx-auto mt-8 px-4 md:px-5 py-12 bg-transparent"
     >
       {/* 🔥 FULL BACKGROUND SLIDESHOW */}
       <div className="absolute inset-0 -z-10">
@@ -63,7 +63,7 @@ export default function NewsGrid() {
         ))}
 
         {/* DARK OVERLAY FOR READABILITY */}
-        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-black/45" />
       </div>
 
       {/* 🧠 CONTENT LAYER */}
@@ -91,7 +91,7 @@ export default function NewsGrid() {
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
               onClick={() => setActiveSlide(i)}
-              className={`rounded-card border border-white/25 bg-white/10 backdrop-blur-md overflow-hidden transition-all duration-300 group grid grid-cols-[80px_1fr] md:grid-cols-1
+              className={`relative z-10 rounded-card border border-white/25 bg-white/10 backdrop-blur-md overflow-hidden transition-all duration-300 group grid grid-cols-[80px_1fr] md:grid-cols-1
                 ${
                   i === activeSlide
                     ? "border-white shadow-lg scale-[1.02]"
