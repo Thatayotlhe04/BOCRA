@@ -1,4 +1,4 @@
-# BOCRA Web Platform Prototype
+# BOCRA Web Platform Prototype For Hackathon
 
 A production-style **Next.js + TypeScript + Tailwind + Supabase** web application prototype for Botswana Communications Regulatory Authority (BOCRA) public digital services.
 
