@@ -14,6 +14,8 @@ It includes:
 Github repo: https://github.com/Thatayotlhe04/BOCRA
 live: https://bocra-theta.vercel.app/
 walkthrough video: https://drive.google.com/file/d/1DradiDQwhIYH8GvRU7uE7gM2WUKHRiWv/view?usp=sharing
+mobile experience video: https://drive.google.com/file/d/1Crjx6pQZTqt-7Q_fRyPCxPThNKEVInVv/view?usp=drivesdk
+
 ## Table of Contents
 
 1. [Features](#features)
