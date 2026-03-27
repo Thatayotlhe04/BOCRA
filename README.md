@@ -12,6 +12,7 @@ It includes:
 
 ---
 live: https://bocra-theta.vercel.app/
+walkthrough video: https://drive.google.com/file/d/1DradiDQwhIYH8GvRU7uE7gM2WUKHRiWv/view?usp=sharing
 ## Table of Contents
 
 1. [Features](#features)
