@@ -106,10 +106,6 @@ BOCRA/
 │   ├── supabase-server.ts
 │   ├── supabase.ts
 │   └── types.ts
-├── docs/
-│   ├── CODEBASE_OVERVIEW_FOR_DEMO.md
-│   ├── RUBRIC_GAP_ANALYSIS.md
-│   └── docs/WALKTHROUGH_VIDEO_SCRIPT.md
 ├── supabase-schema.sql
 ├── SETUP.md
 ├── README.md
