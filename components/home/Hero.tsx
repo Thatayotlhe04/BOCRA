@@ -41,7 +41,7 @@ export default function Hero() {
   return (
     <section className="relative bg-bocra-navy overflow-visible">
       {/* Decorative elements clipped by inner wrapper */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-0">
         <div className="absolute inset-0 hero-grid" />
         <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-bocra-blue/[0.07] blur-[80px] animate-pulse-soft" />
         <div className="absolute bottom-[-30%] left-[-5%] w-[400px] h-[400px] rounded-full bg-bocra-magenta/[0.05] blur-[60px] animate-pulse-soft" style={{ animationDelay: "1s" }} />
@@ -52,7 +52,7 @@ export default function Hero() {
         <div className="flex-1 bg-bocra-blue" /><div className="flex-1 bg-bocra-green" /><div className="flex-1 bg-bocra-magenta" /><div className="flex-1 bg-bocra-yellow" />
       </div>
 
-      <div className="relative z-10 max-w-[980px] mx-auto px-4 md:px-5 pt-12 md:pt-16 pb-14 md:pb-20">
+      <div className={`relative ${dropdownOpen ? "z-[70]" : "z-10"} max-w-[980px] mx-auto px-4 md:px-5 pt-12 md:pt-16 pb-14 md:pb-20`}>
         <div className="text-center animate-fade-up">
           <h1 className="text-[26px] md:text-[38px] font-bold text-white mb-3 leading-[1.15] tracking-tight">
             What do you need<br className="hidden md:block" /> help with today?
