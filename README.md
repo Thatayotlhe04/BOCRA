@@ -1,106 +1,263 @@
-# BOCRA Digital Services Prototype
+# BOCRA Web Platform Prototype
 
-A **Next.js + Supabase** prototype for BOCRA digital transformation use-cases, including:
+A production-style **Next.js + TypeScript + Tailwind + Supabase** web application prototype for Botswana Communications Regulatory Authority (BOCRA) public digital services.
 
-- Public information and service pages.
-- Consumer complaint submission and tracking.
-- Staff/admin workflow entry points.
+It includes:
+- A service-oriented public homepage
+- Complaint filing and tracking workflows
+- Licensing search portal
+- Thematic information portals (domains, cybersecurity, documents, type approval)
+- AI assistant API integration point
+- Admin and login entry points
 
-## 1) Tech Stack
+---
 
-- Next.js 14 (App Router)
-- React 18
-- TypeScript
-- Tailwind CSS
-- Supabase (database, auth, RPC)
+## Table of Contents
 
-## 2) Prerequisites
+1. [Features](#features)
+2. [Tech Stack](#tech-stack)
+3. [Project Structure](#project-structure)
+4. [Getting Started](#getting-started)
+5. [Environment Variables](#environment-variables)
+6. [Database Setup (Supabase)](#database-setup-supabase)
+7. [Available Scripts](#available-scripts)
+8. [Runbook: Common Workflows](#runbook-common-workflows)
+9. [API Routes](#api-routes)
+10. [Deployment](#deployment)
+11. [Troubleshooting](#troubleshooting)
+12. [Security Notes](#security-notes)
+13. [Contributing](#contributing)
 
-- Node.js 18+ (recommended: 20 LTS)
+---
+
+## Features
+
+- **Modern landing experience** with service discovery and quick actions.
+- **Searchable service launcher** with keyboard-friendly dropdown navigation.
+- **Complaints module**:
+  - Multi-step complaint submission
+  - Complaint tracking by tracking ID
+- **Licensing module** for licence records browsing/search.
+- **Public portals** for domains, type approval, cybersecurity, and documents.
+- **Server-side APIs** for complaints, admin, and AI interactions.
+- **Reusable UI components** and icon system.
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **UI:** React 18, Tailwind CSS
+- **Backend/Data:** Supabase (Auth, DB, server client)
+- **Animation:** Framer Motion
+- **Linting:** ESLint (Next.js preset)
+
+---
+
+## Project Structure
+
+```text
+BOCRA/
+├── app/
+│   ├── api/
+│   │   ├── admin/route.ts
+│   │   ├── ai/route.ts
+│   │   └── complaints/route.ts
+│   ├── admin/dashboard/page.tsx
+│   ├── complaints/
+│   │   ├── new/page.tsx
+│   │   └── page.tsx
+│   ├── licensing/page.tsx
+│   ├── login/page.tsx
+│   ├── portals/
+│   │   ├── cybersecurity/page.tsx
+│   │   ├── documents/page.tsx
+│   │   ├── domains/page.tsx
+│   │   ├── type-approval/page.tsx
+│   │   └── page.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── ai/BocraAI.tsx
+│   ├── complaints/
+│   │   ├── ComplaintForm.tsx
+│   │   ├── ComplaintTracker.tsx
+│   │   └── ComplaintsLanding.tsx
+│   ├── home/
+│   │   ├── AboutBOCRA.tsx
+│   │   ├── CTABanner.tsx
+│   │   ├── ComplaintStar.tsx
+│   │   ├── DocsAndAlerts.tsx
+│   │   ├── FeatureWalkthrough.tsx
+│   │   ├── Hero.tsx
+│   │   ├── NewsGrid.tsx
+│   │   ├── SectorGrid.tsx
+│   │   ├── ServiceCards.tsx
+│   │   └── StatsBar.tsx
+│   ├── icons/index.tsx
+│   ├── layout/
+│   │   ├── Footer.tsx
+│   │   └── Header.tsx
+│   └── ui/AnimatedNumber.tsx
+├── lib/
+│   ├── knowledge-base.ts
+│   ├── supabase-server.ts
+│   ├── supabase.ts
+│   └── types.ts
+├── docs/
+│   ├── CODEBASE_OVERVIEW_FOR_DEMO.md
+│   ├── RUBRIC_GAP_ANALYSIS.md
+│   └── docs/WALKTHROUGH_VIDEO_SCRIPT.md
+├── supabase-schema.sql
+├── SETUP.md
+├── README.md
+└── package.json
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js **18+** (Node.js 20 LTS recommended)
 - npm
-- A Supabase project
+- Supabase project (for backend/database functionality)
 
-## 3) Local Installation & Run
-
-1. Install dependencies:
+### Install
 
 ```bash
 npm install
 ```
 
-2. Create environment file:
+### Configure environment
 
 ```bash
 cp .env.local.example .env.local
 ```
 
-3. Set the following variables in `.env.local`:
+Populate `.env.local` with your values (see [Environment Variables](#environment-variables)).
 
-- `NEXT_PUBLIC_SUPABASE_URL`
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-- `SUPABASE_SERVICE_ROLE_KEY`
-
-4. Apply database schema:
-
-- Open Supabase SQL Editor.
-- Run the SQL in `supabase-schema.sql`.
-
-5. Run development server:
+### Start development server
 
 ```bash
 npm run dev
 ```
 
-6. Open:
+Open: `http://localhost:3000`
 
-- `http://localhost:3000`
+---
 
-## 4) Build & Production Run
+## Environment Variables
 
-```bash
-npm run build
-npm run start
-```
+Required (see `.env.local.example`):
 
-## 5) Available Scripts
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `SUPABASE_SERVICE_ROLE_KEY`
 
-- `npm run dev` — development mode
-- `npm run build` — production build
-- `npm run start` — serve production build
-- `npm run lint` — lint checks
+Recommended:
+- Keep `SUPABASE_SERVICE_ROLE_KEY` server-side only.
+- Do not expose service role values in client code.
 
-## 6) Demo Flows
+---
 
-### Complaint submission flow
+## Database Setup (Supabase)
 
-1. Go to **Complaints**.
-2. Start filing a complaint.
-3. Complete eligibility, provider, issue details, and review.
-4. Submit and record tracking ID (`CMP-YYYY-XXXX`).
+1. Open your Supabase project.
+2. Go to **SQL Editor**.
+3. Execute `supabase-schema.sql`.
+4. Confirm required tables/policies/functions are created.
 
-### Complaint tracking flow
+---
 
-1. Open complaint tracker page.
-2. Enter exact complaint ID.
-3. View status and timeline updates.
+## Available Scripts
 
-## 7) Submission Checklist Mapping
+- `npm run dev` — Start local development server
+- `npm run build` — Build production bundle
+- `npm run start` — Run production server
+- `npm run lint` — Run ESLint checks
 
-- ✅ URL link to deployed solution (add your deployed URL in submission form).
-- ⚠️ Walkthrough video (record and include link/file).
-- ⚠️ Installation/executable files for all platforms (for this web app, provide source + deployment URL; optional desktop packaging if required by organizers).
-- ✅ Source code (this repository).
-- ✅ README explaining setup and tools.
+---
 
-## 8) Security Notes
+## Runbook: Common Workflows
 
-- Complaint lookup requires exact complaint ID.
-- Row-level security and server-side access model are designed in Supabase setup.
-- No public endpoint is provided to list all complaints.
+### File a complaint
 
-## 9) Zero-Cost Delivery Strategy
+1. Visit `/complaints/new`
+2. Complete the step-based form
+3. Submit and capture generated tracking ID (format: `CMP-YYYY-XXXX`)
 
-- Host frontend on free tier platforms (e.g., Vercel free tier).
-- Use Supabase free tier for backend/database.
-- Use OBS Studio (free) or built-in OS recorder for walkthrough video.
-- Use GitHub for source hosting and release bundle.
+### Track a complaint
+
+1. Visit `/complaints`
+2. Enter exact complaint ID
+3. Review status and timeline
+
+### Use licensing lookup
+
+1. Visit `/licensing`
+2. Search/filter records via the page controls
+
+---
+
+## API Routes
+
+- `GET/POST /api/complaints` — complaint lookup/creation flows
+- `GET/POST /api/admin` — admin-facing operations entry
+- `POST /api/ai` — AI assistant integration endpoint
+
+> Route behavior depends on configured Supabase project state and environment variables.
+
+---
+
+## Deployment
+
+A typical deployment path:
+
+1. Push repository to GitHub
+2. Import project in Vercel
+3. Add all required environment variables
+4. Deploy
+
+After deploy:
+- Validate homepage and primary flows
+- Validate API route responses in production
+- Validate Supabase connectivity
+
+---
+
+## Troubleshooting
+
+- **Build fails due to env values**
+  - Verify `.env.local` keys and spelling.
+- **Complaint APIs fail locally**
+  - Confirm Supabase schema is applied.
+- **UI looks unstyled**
+  - Ensure Tailwind setup files are unchanged and `app/globals.css` is loaded through `app/layout.tsx`.
+
+---
+
+## Security Notes
+
+- Complaint tracking should require exact complaint IDs.
+- Use Row Level Security (RLS) policies in Supabase for access control.
+- Never leak service role keys to browser-side code.
+
+---
+
+## Contributing
+
+1. Create a feature branch
+2. Make focused changes
+3. Run lint/build checks
+4. Open PR with:
+   - summary
+   - test evidence
+   - screenshots for UI changes
+
+---
+
+If you need a shorter onboarding version, see `SETUP.md` for a quick-start style guide.

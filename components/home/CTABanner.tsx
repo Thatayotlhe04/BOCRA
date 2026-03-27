@@ -3,7 +3,7 @@ import { ArrowRightIcon } from "@/components/icons";
 
 export default function CTABanner() {
   return (
-    <section className="bg-gradient-to-r from-bocra-blue to-[#009EE2] py-12 px-4 text-center">
+    <section className="relative z-20 mt-8 bg-gradient-to-r from-bocra-blue to-[#009EE2] py-12 px-4 text-center border-t border-white/20 shadow-[0_-10px_30px_rgba(12,35,64,0.14)]">
       <div className="max-w-[480px] mx-auto">
         <h2 className="text-lg md:text-[22px] font-bold text-white mb-2.5">Need to file a complaint?</h2>
         <p className="text-sm text-white/60 mb-5 leading-relaxed">Our streamlined process makes it easy to submit and track your consumer complaint.</p>

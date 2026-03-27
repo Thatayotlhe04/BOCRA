@@ -39,9 +39,9 @@ export default function Hero() {
   const navigate = (href: string) => { setQuery(""); setFocused(false); router.push(href); };
 
   return (
-    <section className="relative z-[90] bg-bocra-navy overflow-visible">
+    <section className="relative bg-bocra-navy overflow-visible">
       {/* Decorative elements clipped by inner wrapper */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-0">
         <div className="absolute inset-0 hero-grid" />
         <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-bocra-blue/[0.07] blur-[80px] animate-pulse-soft" />
         <div className="absolute bottom-[-30%] left-[-5%] w-[400px] h-[400px] rounded-full bg-bocra-magenta/[0.05] blur-[60px] animate-pulse-soft" style={{ animationDelay: "1s" }} />
@@ -52,7 +52,7 @@ export default function Hero() {
         <div className="flex-1 bg-bocra-blue" /><div className="flex-1 bg-bocra-green" /><div className="flex-1 bg-bocra-magenta" /><div className="flex-1 bg-bocra-yellow" />
       </div>
 
-      <div className="relative z-10 max-w-[980px] mx-auto px-4 md:px-5 pt-12 md:pt-16 pb-14 md:pb-20">
+      <div className={`relative ${dropdownOpen ? "z-[70]" : "z-10"} max-w-[980px] mx-auto px-4 md:px-5 pt-12 md:pt-16 pb-14 md:pb-20`}>
         <div className="text-center animate-fade-up">
           <h1 className="text-[26px] md:text-[38px] font-bold text-white mb-3 leading-[1.15] tracking-tight">
             What do you need<br className="hidden md:block" /> help with today?
@@ -63,7 +63,7 @@ export default function Hero() {
         </div>
 
         {/* Search — dropdown breaks out and sits above everything below */}
-        <div ref={wrapperRef} className="max-w-[520px] mx-auto relative isolate z-[120] mb-8 animate-fade-up animate-delay-2 overflow-visible">
+        <div ref={wrapperRef} className="max-w-[520px] mx-auto relative isolate z-[1000] mb-8 animate-fade-up animate-delay-2 overflow-visible">
           <span className="absolute left-4 top-[16px] flex pointer-events-none z-10">
             <SearchIcon color={focused ? "rgba(255,255,255,0.6)" : "rgba(255,255,255,0.3)"} size={18} />
           </span>
@@ -73,7 +73,7 @@ export default function Hero() {
             className="w-full py-3.5 pl-12 pr-5 rounded-2xl border border-white/[0.12] bg-white/[0.06] text-white text-sm outline-none font-sans placeholder:text-white/25 focus:border-white/25 focus:bg-white/[0.1] focus:shadow-[0_0_30px_rgba(0,119,182,0.15)] transition-all duration-300" />
 
           {dropdownOpen && (
-            <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.35)] border border-gray-100 overflow-hidden z-[200] animate-slide-up">
+            <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.35)] border border-gray-100 overflow-hidden z-[1100] animate-slide-up">
               {query.trim().length > 0 ? (
                 filtered.length > 0 ? filtered.map((item) => (
                   <button key={item.label} onClick={() => navigate(item.href)} className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-all text-left border-b border-gray-50 last:border-0">
