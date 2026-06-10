@@ -2,6 +2,11 @@ import ComplaintTracker from "@/components/complaints/ComplaintTracker";
 
 interface PageProps { params: { id: string }; }
 
+
+export async function generateStaticParams(): Promise<Array<{ id: string }>> {
+  return [{ id: "CMP-2026-0341" }, { id: "CMP-2026-0298" }];
+}
+
 export default function TrackComplaintPage({ params }: PageProps) {
   return (
     <>
